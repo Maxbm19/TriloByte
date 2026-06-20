@@ -27,39 +27,60 @@ SECTION_HEADERS = {
     "W", "Y", "E", "O",
 }
 
-# Grammatical-category abbreviations that can OPEN a definition. Longest first so
-# the alternation never matches a prefix (e.g. "p" inside "prnl").
-ABBRS = [
+# Abbreviations that can OPEN an entry's category (grammatical class, usage label,
+# or domain tag). If the real first marker is missing here, ENTRY_RE skips the true
+# headword and anchors on a later token, so this set must be exhaustive.
+OPENERS = [
     "interj", "impers", "despect", "interr", "indet", "prnl", "pron", "conj",
     "prep", "expr", "neol", "onom", "imper", "indef", "intr", "num", "amb",
-    "cop", "dem", "rel", "rec", "suf", "art", "adj", "adv", "pers", "tr",
-    "sf", "sm", "s", "p", "v", "f", "m",
+    "cop", "dem", "rel", "rec", "suf", "art", "adj", "adv", "pers", "fig",
+    "com", "dim", "fam", "excl", "tr", "sf", "sm", "s", "p", "v",
+    # domain tags (Capitalized in the source)
+    "Anat", "Biol", "Bot", "Fon", "Gram", "Mat", "Zool", "Mús", "Rel",
 ]
-ABBR_ALT = "|".join(ABBRS)
+# Secondary markers that only continue a category run (never open one alone).
+CLUSTER = OPENERS + ["r", "f", "m", "sing", "pl"]
 
-# Characters allowed inside a quechua headword (letters, apostrophe, !, ¡).
-HW_TOKEN = r"[A-Za-zÑñÁÉÍÓÚÜáéíóú'!¡]+"
-HEADWORD = rf"{HW_TOKEN}(?:[ ,]+{HW_TOKEN})*"
+
+def _alt(words):
+    return "|".join(sorted(set(words), key=len, reverse=True))
+
+
+OPEN_ALT = _alt(OPENERS)
+CLUSTER_ALT = _alt(CLUSTER)
+ABBR_WORDS = {w.lower() for w in CLUSTER}  # blocklist: never a real headword
+
+# Headword character classes. The FIRST token of an entry must lead with a
+# lowercase quechua letter (>=2 chars) OR be an ALL-CAPS normalized form — this
+# is what distinguishes a real headword from a Spanish sentence ("Adornar.") or a
+# Title-case quechua cross-reference ("Watuy.") appearing inside a definition.
+LOWER = "a-zñáéíóúü"
+UPPER = "A-ZÑÁÉÍÓÚÜ"
+HW_CH = rf"{LOWER}{UPPER}'!¡"
+FIRST_TOKEN = rf"(?:[{LOWER}][{HW_CH}]+|[{UPPER}'!¡]{{2,}})"
+HEADWORD = rf"{FIRST_TOKEN}(?:[ ,]+[{HW_CH}]+)*"
 
 # Separator between headword and category: a period, OR (for interjections like
 # "atatay! interj.") the headword's own trailing "!".
 SEP = r"(?:\.|(?<=!))"
 
-# A line STARTS a new entry when it begins with: headword(s)<sep> abbr.
-ENTRY_START = re.compile(rf"^({HEADWORD}){SEP}\s+(?:{ABBR_ALT})\.\s", re.UNICODE)
-# A line that is ONLY a headword (its category wrapped onto the next line).
-BARE_HEADWORD = re.compile(rf"^({HEADWORD}){SEP}$", re.UNICODE)
-# Next line begins directly with a category abbreviation.
-NEXT_ABBR = re.compile(rf"^(?:{ABBR_ALT})\.\s", re.UNICODE)
+# An entry begins at a sentence boundary (start of text, or after . ! ?) followed
+# by a headword, its separator, and a category abbreviation. Works regardless of
+# line wrapping (category may wrap; headword may share a line with the prior def).
+ENTRY_RE = re.compile(
+    rf"(?:\A|(?<=[.!?])\s)(?P<hw>{HEADWORD}){SEP}\s+(?P<cat>(?:{OPEN_ALT})\.)\s",
+    re.UNICODE,
+)
 # A page is an entry page once we see a clear "word. abbr." entry near the top.
-ENTRY_HINT = re.compile(rf"^{HEADWORD}{SEP}\s+(?:{ABBR_ALT})\.\s", re.MULTILINE | re.UNICODE)
+ENTRY_HINT = re.compile(rf"^{HEADWORD}{SEP}\s+(?:{OPEN_ALT})\.\s", re.MULTILINE | re.UNICODE)
 
 # Full parse of an assembled entry: headword + category cluster + definition.
 ENTRY_PARSE = re.compile(
-    rf"^(?P<hw>{HEADWORD}){SEP}\s+(?P<rest>(?:{ABBR_ALT})\..*)$", re.DOTALL | re.UNICODE
+    rf"^(?P<hw>{HEADWORD}){SEP}\s+(?P<rest>(?:{OPEN_ALT})\..*)$", re.DOTALL | re.UNICODE
 )
+# A category is a run of abbreviation markers (e.g. "adj. y s.", "prnl. y r.", "s. f.").
 CATEGORY = re.compile(
-    rf"^((?:{ABBR_ALT})\.(?:\s*(?:y|e|o|,)\s*(?:{ABBR_ALT})\.)*)\s*",
+    rf"^((?:{CLUSTER_ALT})\.(?:\s*(?:y|e|o|,)?\s*(?:{CLUSTER_ALT})\.)*)\s*",
     re.UNICODE,
 )
 
@@ -84,16 +105,6 @@ def clean_line(line):
     return line.replace("’", "'").strip()
 
 
-def is_headword_lead(line):
-    """Real quechua headwords lead with a lowercase letter, or are the all-caps
-    normalized form. Title-case leads are wrapped continuation text, not entries."""
-    tok = re.match(HW_TOKEN, line)
-    if not tok:
-        return False
-    word = tok.group(0)
-    return word[0].islower() or word.isupper() or not word[0].isalpha()
-
-
 def is_noise(line):
     if not line:
         return True
@@ -106,43 +117,28 @@ def is_noise(line):
     return False
 
 
-def is_entry_start(line, next_line):
-    """True if `line` opens a new dictionary entry."""
-    if not is_headword_lead(line):
-        return False
-    if ENTRY_START.match(line):
-        return True
-    # Headword alone on its line, category wrapped to the next line.
-    if BARE_HEADWORD.match(line) and next_line is not None and NEXT_ABBR.match(next_line):
-        return True
-    return False
-
-
-def iter_entries(doc, start, end):
-    """Yield raw entry strings (headword + wrapped definition rejoined)."""
-    lines = []
+def build_blob(doc, start, end):
+    """Join all non-noise lines of the section into one normalized text stream,
+    de-hyphenating words split across line breaks."""
+    parts = []
     for i in range(start, end):
         for raw in doc[i].get_text().split("\n"):
             line = clean_line(raw)
-            if not is_noise(line):
-                lines.append(line)
-
-    buf = []
-    for j, line in enumerate(lines):
-        next_line = lines[j + 1] if j + 1 < len(lines) else None
-        if is_entry_start(line, next_line):
-            if buf:
-                yield re.sub(r"\s+", " ", " ".join(buf)).strip()
-            buf = [line]
-        elif buf:
-            # de-hyphenate a word split across the line break
-            if buf[-1].endswith("-") and re.match(r"[a-zñ]", line):
-                buf[-1] = buf[-1][:-1] + line
+            if is_noise(line):
+                continue
+            if parts and parts[-1].endswith("-") and re.match(rf"[{LOWER}]", line):
+                parts[-1] = parts[-1][:-1] + line  # de-hyphenate across break
             else:
-                buf.append(line)
-        # else: stray continuation before any entry started -> drop
-    if buf:
-        yield re.sub(r"\s+", " ", " ".join(buf)).strip()
+                parts.append(line)
+    return re.sub(r"\s+", " ", " ".join(parts)).strip()
+
+
+def iter_entries(doc, start, end):
+    """Yield raw entry strings by splitting the section blob at each entry start."""
+    blob = build_blob(doc, start, end)
+    starts = [m.start("hw") for m in ENTRY_RE.finditer(blob)]
+    for a, b in zip(starts, starts[1:] + [len(blob)]):
+        yield blob[a:b].strip()
 
 
 def parse_entry(text):
@@ -158,6 +154,9 @@ def parse_entry(text):
 
     variants = [v.strip() for v in hw.split(",") if v.strip()]
     quechua = variants[0] if variants else hw
+    # Safety net: a bare abbreviation is never a real headword.
+    if quechua.lower().rstrip(".") in ABBR_WORDS:
+        return None
     # Normalized spelling is given in small caps (ALL CAPS) variant, if any.
     normalizado = next((v for v in variants if v.isupper() and len(v) > 1), quechua)
 
