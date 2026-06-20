@@ -1,22 +1,33 @@
-"""Compara las traducciones quechua->español de uno o varios LLM (vía OpenRouter)
+"""Compara las traducciones quechua->español de uno o varios LLM (vía Gemini)
 contra el diccionario boliviano scrapeado (data/diccionario_quechua_castellano.csv).
 
+Gemini expone un endpoint compatible con el SDK de OpenAI, así que solo cambian
+base_url, api_key y el nombre del modelo.
+
 Requisitos:
-    export OPENROUTER_API_KEY=sk-or-...
+    export GEMINI_API_KEY=AIza...           # de https://aistudio.google.com/apikey
     uv add openai rapidfuzz   # (rapidfuzz es opcional, mejora el match difuso)
 
 Uso:
-    uv run python comparar_traducciones.py            # muestra 20 palabras, 1 modelo
-    uv run python comparar_traducciones.py --n 30 --modelos meta-llama/llama-3.3-70b-instruct:free qwen/qwen3-coder:free
+    uv run python comparar_traducciones.py            # 20 palabras, gemini-2.0-flash
+    uv run python comparar_traducciones.py --n 200    # barre 200 palabras
+    uv run python comparar_traducciones.py --n 50 --modelos gemini-2.0-flash gemini-2.5-flash
 """
 
 import argparse
 import csv
 import os
 import sys
+import time
 from pathlib import Path
 
 from openai import OpenAI
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # carga GEMINI_API_KEY desde .env
+except ImportError:
+    pass
 
 try:
     from rapidfuzz import fuzz
@@ -29,10 +40,11 @@ except ImportError:  # fallback sin dependencia extra
 
 CSV_PATH = Path("data/diccionario_quechua_castellano.csv")
 UMBRAL = 0.60  # >= se considera "coincide"
+PAUSA = 4.5   # segundos entre requests (~13/min, bajo el límite gratis de 15/min)
 
 client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.environ.get("OPENROUTER_API_KEY"),
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    api_key=os.environ.get("GEMINI_API_KEY"),
 )
 
 PROMPT = (
@@ -70,13 +82,13 @@ def main():
     ap.add_argument(
         "--modelos",
         nargs="+",
-        default=["meta-llama/llama-3.3-70b-instruct:free"],
-        help="lista de model IDs de OpenRouter",
+        default=["gemini-2.5-flash"],
+        help="lista de model IDs de Gemini (ej. gemini-2.0-flash gemini-2.5-flash)",
     )
     args = ap.parse_args()
 
-    if not os.environ.get("OPENROUTER_API_KEY"):
-        sys.exit("Falta OPENROUTER_API_KEY en el entorno.")
+    if not os.environ.get("GEMINI_API_KEY"):
+        sys.exit("Falta GEMINI_API_KEY en el entorno.")
 
     muestra = cargar_muestra(args.n)
     print(f"Evaluando {len(muestra)} palabras x {len(args.modelos)} modelo(s)\n")
@@ -92,7 +104,9 @@ def main():
                 pred = traducir(modelo, quechua)
             except Exception as e:  # rate limit, etc.
                 print(f"  [error en '{quechua}']: {e}")
+                time.sleep(PAUSA)
                 continue
+            time.sleep(PAUSA)  # respeta el límite gratis (~15 req/min)
             sim = similitud(normalizar(pred), normalizar(real))
             ok = sim >= UMBRAL
             aciertos += ok
