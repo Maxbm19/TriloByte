@@ -59,7 +59,7 @@ def main():
         from difflib import SequenceMatcher
         def lex(a, b): return SequenceMatcher(None, a, b).ratio()
 
-    sm = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+    sm = SentenceTransformer("hiiamsid/sentence_similarity_spanish_es")
     idxs = sorted(preds)
     reales = [ref[i]["real"] for i in idxs]
     textos = [preds[i] for i in idxs]

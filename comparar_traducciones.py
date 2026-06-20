@@ -50,7 +50,7 @@ OUT_PATH = Path("data/comparacion_llm.csv")
 UMBRAL = 0.65        # similitud SEMÁNTICA >= se considera "coincide"
 PAUSA = 12.0         # seg entre requests (~5/min, estable bajo el límite gratis de 2.5-flash)
 SEED = 42            # semilla del muestreo aleatorio (reproducible)
-EMB_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+EMB_MODEL = "hiiamsid/sentence_similarity_spanish_es"  # fuerte, específico de español
 
 # Proveedor activo (se fija en main según --proveedor). Clientes perezosos.
 PROVEEDOR = "claude"
@@ -92,7 +92,7 @@ def get_embedder():
     global _embedder
     if _embedder is None:
         from sentence_transformers import SentenceTransformer
-        print(f"Cargando modelo de embeddings '{EMB_MODEL}' (1ª vez descarga ~120MB)…")
+        print(f"Cargando modelo de embeddings '{EMB_MODEL}' (1ª vez descarga ~440MB)…")
         _embedder = SentenceTransformer(EMB_MODEL)
     return _embedder
 

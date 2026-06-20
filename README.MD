@@ -7,7 +7,7 @@ de estudio.
 La idea es simple: tomamos un diccionario bilingüe quechua–castellano publicado
 por el Ministerio de Educación de Bolivia, le pedimos a varios LLM que definan en
 español cada palabra quechua, y comparamos su respuesta contra la definición real
-del diccionario usando **similitud semántica** (embeddings multilingües).
+del diccionario usando **similitud semántica** (embeddings de español).
 
 > Fuente del diccionario: Teófilo Laime Ajacopa, *Diccionario Bilingüe / Iskay
 > simipi yuyayk'ancha*, 2.ª ed. (La Paz, 2007).
@@ -16,27 +16,37 @@ del diccionario usando **similitud semántica** (embeddings multilingües).
 ## Resultados
 
 Coincidencia = la definición del LLM tiene similitud semántica ≥ **0.65** con la
-del diccionario (coseno entre embeddings multilingües). Todas las muestras usan la
-misma semilla (`seed=42`), así que los modelos se evalúan sobre las mismas palabras.
+del diccionario (coseno entre embeddings de español, modelo
+`hiiamsid/sentence_similarity_spanish_es`). Todas las muestras usan la misma
+semilla (`seed=42`), así que los modelos se evalúan sobre las mismas palabras.
 
-| Modelo                  | Coincidencia | Muestra |
-|-------------------------|:------------:|:-------:|
-| `claude-opus-4-8`       | **74 %**     | 100     |
-| `gemini-2.5-flash-lite` | 32 %         | 22      |
-| `gemini-2.5-flash`      | 25 %         | 16      |
+| Modelo                  | Coincidencia | Muestra | Nota |
+|-------------------------|:------------:|:-------:|------|
+| `claude-opus-4-8`       | 57 %         | 100     | con referencia a la vista (anchoring) |
+| `gemini-2.5-flash`      | 12 %         | 16      | a ciegas |
+| `gemini-2.5-flash-lite` | 5 %          | 22      | a ciegas |
+| `claude-haiku-4-5`      | 4 %          | **833** | a ciegas |
 
-> ⚠️ Las muestras de Gemini son pequeñas porque el cupo gratis diario corta las
-> corridas a mitad de camino. Para una comparación rigurosa hay que ampliarlas
-> (ver *Cómo correrlo*). Los números actuales son orientativos, no concluyentes.
+> ⚠️ Dos advertencias clave:
+> 1. **El umbral 0.65 es relativo al modelo de embeddings.** El modelo español da
+>    cosenos más bajos en valor absoluto que un multilingüe genérico, así que los
+>    porcentajes son conservadores. Lo robusto es el **orden** (opus ≫ gemini ≫
+>    haiku) y la curva `precision_por_umbral`, no el número suelto.
+> 2. **`claude-opus-4-8` se midió con la referencia visible** (sesgo de anchoring),
+>    así que su 57 % no es comparable de igual a igual con los demás (a ciegas).
+>
+> Conclusión robusta: los LLM entienden **poco** el quechua boliviano, y los
+> modelos chicos (haiku, flash-lite) entienden **aún menos**.
 
 Las figuras estilo *paper* se generan en [`figs/`](figs/):
 
 | | |
 |---|---|
-| `distribucion_similitud` | histograma de la similitud semántica |
-| `lexica_vs_semantica`    | por qué la métrica léxica subestima |
-| `precision_por_umbral`   | sensibilidad de la precisión al umbral |
-| `similitud_por_categoria`| calidad por categoría gramatical |
+| `distribucion_similitud`  | histograma + densidad (KDE) de la similitud semántica |
+| `lexica_vs_semantica`     | dispersión con densidad y marginales: la léxica subestima |
+| `precision_por_umbral`    | sensibilidad de la coincidencia al umbral, por modelo |
+| `similitud_por_categoria` | calidad por categoría gramatical (con IC 95 %) |
+| `comparacion_modelos`     | % de coincidencia por modelo |
 
 ## Cómo funciona
 
@@ -55,8 +65,9 @@ PDF del diccionario          LLMs (Gemini / OpenRouter / Claude)
    métricas:
    - **léxica** (`rapidfuzz`): parecido de caracteres/palabras. Falla con sinónimos.
    - **semántica** (`sentence-transformers`, local y gratis): coseno entre
-     embeddings multilingües. Capta el significado ("cardón" ≈ "cacto"). **Esta
-     decide la coincidencia.**
+     embeddings de español (`hiiamsid/sentence_similarity_spanish_es`, específico
+     de español). Capta el significado ("cardón" ≈ "cacto"). **Esta decide la
+     coincidencia.**
 3. **Figuras** (`graficos.py`): genera los gráficos a 300 DPI (PNG + PDF).
 
 ## Instalación
@@ -72,10 +83,13 @@ Para usar los modelos vía API, definí las claves en un archivo `.env`:
 ```dotenv
 GEMINI_API_KEY=AIza...          # https://aistudio.google.com/apikey
 OPENROUTER_API_KEY=sk-or-v1-... # https://openrouter.ai/keys
+ANTHROPIC_API_KEY=sk-ant-...    # https://console.anthropic.com  (Claude + juez)
 ```
 
-> El modelo de embeddings (`paraphrase-multilingual-MiniLM-L12-v2`, ~120 MB) se
-> descarga una sola vez la primera vez que se ejecuta la comparación.
+> El modelo de embeddings (`hiiamsid/sentence_similarity_spanish_es`, ~440 MB,
+> específico de español) se descarga una sola vez la primera vez que se ejecuta la
+> comparación. Para re-puntuar CSV ya generados con este modelo: `uv run python
+> repuntuar.py`.
 
 ## Cómo correrlo
 
@@ -123,6 +137,8 @@ comparar_traducciones.py   Evalúa modelos de Gemini (define + puntúa)
 comparar_openrouter.py     Evalúa modelos de OpenRouter (reutiliza la lógica)
 puntuar_claude.py          Puntúa traducciones de Claude (sin API)
 parse_respuestas.py        Puntúa respuestas pegadas del chat (sin API)
+repuntuar.py               Re-puntúa CSV con el embedding español (sin API)
+juez_llm.py                LLM-as-judge (opus-4-8) — 3 métricas por traducción
 recuperar_flash.py         Recupera filas de Gemini desde un log (utilidad)
 graficos.py                Genera las figuras estilo paper
 data/                      PDF, diccionario CSV y CSVs de comparación

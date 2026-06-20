@@ -133,7 +133,7 @@ def main():
             return SequenceMatcher(None, a, b).ratio()
 
     print(f"Puntuando {len(DATOS)} traducciones de {MODELO} (sin API)…")
-    m = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+    m = SentenceTransformer("hiiamsid/sentence_similarity_spanish_es")
     reales = [r for _, r, _ in DATOS]
     preds = [p for _, _, p in DATOS]
     er = m.encode(reales, normalize_embeddings=True)
