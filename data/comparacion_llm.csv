@@ -1,6 +1,0 @@
-modelo,quechua,real,llm,similitud,coincide
-gemini-2.5-flash,achachay!,¡Qué frío!,¡Qué frío!,1.0,True
-gemini-2.5-flash,achakana,Una de las variedades de cacto de raíz comestible,Cardón,0.163,False
-gemini-2.5-flash,achakiy,"Culpar a uno de algo, con mentira; calumniar (JH)",¡Ay!,0.039,False
-gemini-2.5-flash,achalachiy,"Decorar. Adornar, hermosear",Adornar,0.412,False
-gemini-2.5-flash,achalay,"Vestir, ataviar con prendas que son sólo vanidad",Adornar,0.218,False
