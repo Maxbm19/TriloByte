@@ -48,7 +48,7 @@ except ImportError:  # fallback sin dependencia extra
 CSV_PATH = Path("data/diccionario_quechua_castellano.csv")
 OUT_PATH = Path("data/comparacion_llm.csv")
 UMBRAL = 0.65        # similitud SEMÁNTICA >= se considera "coincide"
-PAUSA = 6.5          # seg entre requests (~9/min, bajo el límite gratis de 2.5-flash)
+PAUSA = 12.0         # seg entre requests (~5/min, estable bajo el límite gratis de 2.5-flash)
 SEED = 42            # semilla del muestreo aleatorio (reproducible)
 EMB_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
@@ -131,15 +131,19 @@ def normalizar(texto):
 
 
 def main():
+    global PAUSA
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=500, help="tamaño de la muestra (0 = todo)")
     ap.add_argument(
         "--modelos",
         nargs="+",
         default=["gemini-2.5-flash"],
-        help="model IDs de Gemini (ej. gemini-2.5-flash)",
+        help="model IDs de Gemini (ej. gemini-2.5-flash gemini-2.5-flash-lite)",
     )
+    ap.add_argument("--pausa", type=float, default=PAUSA,
+                    help="segundos entre requests (sube si hay rate-limit)")
     args = ap.parse_args()
+    PAUSA = args.pausa
 
     if not os.environ.get("GEMINI_API_KEY"):
         sys.exit("Falta GEMINI_API_KEY en el entorno o en .env")

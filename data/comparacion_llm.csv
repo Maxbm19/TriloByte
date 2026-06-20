@@ -1,0 +1,39 @@
+modelo,quechua,real,llm,sim_lexica,sim_semantica,coincide
+gemini-2.5-flash-lite,jawa,Afuera. Fuera del sitio en que uno está,Parte superior o encima de algo.,0.429,0.461,False
+gemini-2.5-flash-lite,aspakay,Acción de dar ofrenda a la divinidad con fiesta. Aspecto que presenta el cielo cuando hay nubes tenues y de varios matices. Arrebol color rojo de las nubes heridas por los rayos del sol,Aspakay: Acción de desgranar o separar los granos de un cereal o legumbre de su mazorca o vaina.,0.465,0.157,False
+gemini-2.5-flash-lite,piqtuy,Mezclar. Desordenar lo que ya estaba en orden,Acción de doblar o plegar algo.,0.427,0.64,False
+gemini-2.5-flash-lite,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,Hacer que alguien o algo huela o tenga un olor agradable.,0.496,0.82,True
+gemini-2.5-flash-lite,maray,"Derribar. Echar abajo, tirar al suelo",Maray: Persona o animal que tiene la piel o el pelaje de color blanco.,0.404,0.176,False
+gemini-2.5-flash-lite,kikinchay,Identificar. Hacer que dos o más cosas que en realidad son distintas aparezcan y se consideren como una misma,"Diferencia, distinción o particularidad que hace a algo o alguien único.",0.494,0.699,True
+gemini-2.5-flash-lite,janaq,"Alto. Elevado, superior, arriba","Cielo, parte superior, arriba.",0.711,0.929,True
+gemini-2.5-flash-lite,ch'uwa,Privación de algo necesario o útil,"Prenda de vestir tejida, generalmente de lana, de colores vivos y diseños geométricos.",0.372,0.133,False
+gemini-2.5-flash-lite,thanta,Trapo. Pedazo de tela desechado por viejo,"Cosa seca, deshidratada o marchita.",0.427,0.389,False
+gemini-2.5-flash-lite,ayllu suti,Apellido. Nombre de familia,Nombre de la comunidad o grupo familiar.,0.606,0.746,True
+gemini-2.5-flash-lite,awqay,"Guerrear, hacer guerra","Enemigo, adversario.",0.341,0.672,True
+gemini-2.5-flash-lite,iñu,Nigua. Insecto parecido a la pulga que se introduce en especial al pie del hombre o en la pata de los animales,Creencia o fe.,0.205,0.082,False
+gemini-2.5-flash-lite,manchariy,Asustarse,Sentir temor o espanto.,0.323,0.787,True
+gemini-2.5-flash-lite,miniy,Tramar. Cruzar la rama con la urdimbre para tejer alguna tela,"Tener, poseer.",0.225,0.303,False
+gemini-2.5-flash-lite,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,Acción de hacer que algo se vuelva espeso o denso.,0.378,0.419,False
+gemini-2.5-flash-lite,ati,Adversidad. Desventura,"Poder, ser capaz de hacer algo.",0.385,0.423,False
+gemini-2.5-flash-lite,llat'a kay,Desnudez. Falta de vestido,Lentitud o tardanza en el movimiento o en la acción.,0.361,0.279,False
+gemini-2.5-flash-lite,tutayay,Anochecer. Llegar la noche,"Oscurecer, anochecer.",0.565,0.883,True
+gemini-2.5-flash-lite,mañaqay,Pedir la mano de la novia,Habilidad o destreza para hacer algo.,0.414,0.283,False
+gemini-2.5-flash-lite,ura,"Bajo, -ja. Lo que está en un lugar inferior respecto a otras cosas de la misma clase","Abajo, debajo.",0.227,0.602,False
+gemini-2.5-flash-lite,allinchana,Normalización,allinchana: Adjetivo que indica algo que se puede mejorar o arreglar.,0.182,0.337,False
+gemini-2.5-flash-lite,khiwiy,"Envolver. Enovillar, arrollar",Retorcer o enrollar algo sobre sí mismo.,0.441,0.608,False
+gemini-2.5-flash,jawa,"Sitio, lugar, superficie, parte. Tawantinsuyuqa tawa jawapi t'aqakun: Tahuantinsuyo se divide en cuatro partes",Parte exterior o superficie de un objeto…,0.42,0.41,False
+gemini-2.5-flash,aspakay,Acción de dar ofrenda a la divinidad con fiesta. Aspecto que presenta el cielo cuando hay nubes tenues y de varios matices. Arrebol color rojo de las nubes heridas por los rayos del sol,Hacer la señal de la cruz.…,0.37,0.41,False
+gemini-2.5-flash,piqtuy,"Embadurnar. Manchar, pintarrajear. piqu, k'ullu phislu",Preparar un plato andino que consiste en…,0.5,0.29,False
+gemini-2.5-flash,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,"Olfatear por aquí y por allá, generalmen…",0.57,0.42,False
+gemini-2.5-flash,maray,"Abatir. Derribar, tumbar. Hacer que baje una cosa que antes tenía la posición vertical",Piedra grande y plana utilizada para mol…,0.4,0.13,False
+gemini-2.5-flash,kikinchay,Igualar. Poner al igual,Establecer la identidad o igualdad de al…,0.45,0.56,False
+gemini-2.5-flash,janaq,"Alto. Elevado, superior, arriba","Relativo a la parte superior, a la altur…",0.56,0.75,True
+gemini-2.5-flash,ch'uwa,Líquido transparente,"Dícese de lo que es transparente, puro y…",0.37,0.26,False
+gemini-2.5-flash,thanta,"Raído, -da. Dícese de cualquier tela muy gastada por el uso","Prenda de vestir u objeto muy viejo, gas…",0.51,0.67,True
+gemini-2.5-flash,ayllu suti,Apellido. Nombre de familia,Nombre que identifica a una comunidad o…,0.5,0.48,False
+gemini-2.5-flash,awqay,"Guerrear, hacer guerra",Hacer la guerra.…,0.89,0.93,True
+gemini-2.5-flash,iñu,Nigua. Insecto parecido a la pulga que se introduce en especial al pie del hombre o en la pata de los animales,Designa una cantidad mínima o una pizca…,0.41,0.23,False
+gemini-2.5-flash,manchariy,Asustarse,Acción de causar miedo o espanto.…,0.34,0.83,True
+gemini-2.5-flash,miniy,Tramar. Cruzar la rama con la urdimbre para tejer alguna tela,"Cargar en la espalda, particularmente un…",0.42,0.36,False
+gemini-2.5-flash,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,"Acto de garabatear, dibujar o escribir d…",0.39,0.41,False
+gemini-2.5-flash,ati,"Posibilidad, calidad de posible",Tener la capacidad o el poder para reali…,0.31,0.39,False
