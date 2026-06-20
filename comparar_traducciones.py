@@ -52,15 +52,31 @@ PAUSA = 12.0         # seg entre requests (~5/min, estable bajo el límite grati
 SEED = 42            # semilla del muestreo aleatorio (reproducible)
 EMB_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 
-client = OpenAI(
-    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
-    api_key=os.environ.get("GEMINI_API_KEY"),
-)
+# Proveedor activo (se fija en main según --proveedor). Clientes perezosos.
+PROVEEDOR = "claude"
+_gemini = _claude = None
+
+
+def cliente_gemini():
+    global _gemini
+    if _gemini is None:
+        _gemini = OpenAI(
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+            api_key=os.environ.get("GEMINI_API_KEY"),
+        )
+    return _gemini
+
+
+def cliente_claude():
+    global _claude
+    if _claude is None:
+        import anthropic
+        _claude = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    return _claude
 
 # Prompt mejorado: pide una DEFINICIÓN breve estilo diccionario (no una sola
 # palabra), para que sea comparable con la columna 'traduccion' del diccionario.
 PROMPT = (
-    "Eres un lexicógrafo experto en quechua boliviano. "
     "Da la definición en español de la siguiente palabra quechua, tal como "
     "aparecería en un diccionario: una sola oración breve y clara, sin ejemplos, "
     "sin repetir la palabra quechua y sin comillas.\n\n"
@@ -108,16 +124,32 @@ def ya_hechas():
         return {(r["modelo"], r["quechua"]) for r in csv.DictReader(f)}
 
 
+def _limpiar(texto):
+    """Quita encabezados markdown, viñetas y líneas vacías; deja solo la
+    definición (algunos modelos anteponen un título tipo '# palabra')."""
+    lineas = [ln.strip(" *->•").strip() for ln in texto.splitlines()]
+    lineas = [ln for ln in lineas if ln and not ln.startswith("#")]
+    return " ".join(lineas).strip()
+
+
 def traducir(modelo, palabra, intentos=5):
     """Pide la definición al LLM, con reintentos y backoff exponencial ante 429."""
+    contenido = PROMPT.format(palabra=palabra)
     for i in range(intentos):
         try:
-            resp = client.chat.completions.create(
+            if PROVEEDOR == "claude":
+                resp = cliente_claude().messages.create(
+                    model=modelo,
+                    max_tokens=256,
+                    messages=[{"role": "user", "content": contenido}],
+                )
+                return _limpiar(resp.content[0].text)
+            resp = cliente_gemini().chat.completions.create(
                 model=modelo,
-                messages=[{"role": "user", "content": PROMPT.format(palabra=palabra)}],
+                messages=[{"role": "user", "content": contenido}],
                 temperature=0,
             )
-            return resp.choices[0].message.content.strip()
+            return _limpiar(resp.choices[0].message.content)
         except Exception as e:
             if i == intentos - 1:
                 raise
@@ -131,26 +163,32 @@ def normalizar(texto):
 
 
 def main():
-    global PAUSA
+    global PAUSA, PROVEEDOR
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=500, help="tamaño de la muestra (0 = todo)")
+    ap.add_argument("--proveedor", choices=["claude", "gemini"], default="claude",
+                    help="qué API usar para traducir")
     ap.add_argument(
         "--modelos",
         nargs="+",
-        default=["gemini-2.5-flash"],
-        help="model IDs de Gemini (ej. gemini-2.5-flash gemini-2.5-flash-lite)",
+        default=None,
+        help="model IDs (def: claude-haiku-4-5 / gemini-2.5-flash según proveedor)",
     )
     ap.add_argument("--pausa", type=float, default=PAUSA,
                     help="segundos entre requests (sube si hay rate-limit)")
     args = ap.parse_args()
     PAUSA = args.pausa
+    PROVEEDOR = args.proveedor
+    modelos = args.modelos or (["claude-haiku-4-5"] if PROVEEDOR == "claude"
+                               else ["gemini-2.5-flash"])
 
-    if not os.environ.get("GEMINI_API_KEY"):
-        sys.exit("Falta GEMINI_API_KEY en el entorno o en .env")
+    key = "ANTHROPIC_API_KEY" if PROVEEDOR == "claude" else "GEMINI_API_KEY"
+    if not os.environ.get(key):
+        sys.exit(f"Falta {key} en el entorno o en .env")
 
     muestra = cargar_muestra(args.n)
     hechas = ya_hechas()
-    print(f"Muestra: {len(muestra)} palabras × {len(args.modelos)} modelo(s) "
+    print(f"Muestra: {len(muestra)} palabras × {len(modelos)} modelo(s) "
           f"(ya hechas: {len(hechas)})\n")
 
     nuevo = not OUT_PATH.exists()
@@ -162,7 +200,7 @@ def main():
         writer.writeheader()
 
     try:
-        for modelo in args.modelos:
+        for modelo in modelos:
             aciertos = evaluados = 0
             print(f"=== {modelo} ===")
             for fila in muestra:

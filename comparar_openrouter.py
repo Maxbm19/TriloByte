@@ -81,8 +81,8 @@ def main():
         "--modelos",
         nargs="+",
         default=[
-            "meta-llama/llama-3.3-70b-instruct:free",
-            "qwen/qwen3-next-80b-a3b-instruct:free",
+            "openai/gpt-oss-120b:free",
+            "google/gemma-4-31b-it:free",
         ],
         help="model IDs de OpenRouter (ej. openai/gpt-oss-120b:free)",
     )
