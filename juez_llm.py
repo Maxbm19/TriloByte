@@ -21,7 +21,10 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+
+WORKERS = 8  # llamadas concurrentes al juez
 
 try:
     from dotenv import load_dotenv
@@ -38,11 +41,14 @@ PAUSA = 0.4
 PROMPT = (
     "Eres un evaluador experto de lexicografía quechua–español. Te doy una palabra "
     "quechua, su definición de REFERENCIA (diccionario boliviano) y una definición "
-    "CANDIDATA generada por un modelo. Evalúa la CANDIDATA frente a la referencia.\n\n"
+    "CANDIDATA generada por un modelo. Compara la CANDIDATA con la referencia.\n\n"
     "Califica de 1 (muy malo) a 5 (excelente) en tres métricas:\n"
     "- adecuacion: qué tan correcto es el significado respecto a la referencia.\n"
     "- completitud: qué tanto cubre los sentidos principales (ni incompleta ni con relleno).\n"
-    "- fluidez: naturalidad y claridad del español, estilo diccionario.\n\n"
+    "- fluidez: naturalidad y claridad del español, estilo diccionario.\n"
+    "Y además da:\n"
+    "- similitud: qué tan parecidas son en significado la candidata y la referencia, "
+    "de 0 (sin relación) a 100 (idénticas en sentido).\n\n"
     "Palabra quechua: {q}\n"
     "Referencia: {real}\n"
     "Candidata: {cand}\n"
@@ -54,9 +60,10 @@ SCHEMA = {
         "adecuacion": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
         "completitud": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
         "fluidez": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+        "similitud": {"type": "integer"},
         "justificacion": {"type": "string"},
     },
-    "required": ["adecuacion", "completitud", "fluidez", "justificacion"],
+    "required": ["adecuacion", "completitud", "fluidez", "similitud", "justificacion"],
     "additionalProperties": False,
 }
 
@@ -102,42 +109,51 @@ def main():
           f"{len(pendientes)} pendientes\n")
 
     campos = ["modelo", "quechua", "real", "llm", "adecuacion", "completitud",
-              "fluidez", "justificacion"]
+              "fluidez", "similitud", "justificacion"]
     nuevo = not out.exists()
     f = out.open("a", newline="", encoding="utf-8")
     w = csv.DictWriter(f, fieldnames=campos)
     if nuevo:
         w.writeheader()
 
-    sumas = {"adecuacion": 0, "completitud": 0, "fluidez": 0}
+    sumas = {"adecuacion": 0, "completitud": 0, "fluidez": 0, "similitud": 0}
     n = 0
+
+    def tarea(r):
+        return r, juzgar(r["quechua"], r["real"], r["llm"])
+
     try:
-        for r in pendientes:
-            try:
-                v = juzgar(r["quechua"], r["real"], r["llm"])
-            except Exception as e:
-                print(f"  [error en '{r['quechua']}']: {e}")
-                continue
-            w.writerow({"modelo": args.modelo, "quechua": r["quechua"], "real": r["real"],
-                        "llm": r["llm"], **{k: v[k] for k in
-                        ("adecuacion", "completitud", "fluidez", "justificacion")}})
-            f.flush()
-            for k in sumas:
-                sumas[k] += v[k]
-            n += 1
-            if n % 25 == 0:
-                print(f"  {n}/{len(pendientes)}  "
-                      f"ade={sumas['adecuacion']/n:.2f} "
-                      f"com={sumas['completitud']/n:.2f} "
-                      f"flu={sumas['fluidez']/n:.2f}")
-            time.sleep(PAUSA)
+        with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+            futuros = [ex.submit(tarea, r) for r in pendientes]
+            for fut in as_completed(futuros):
+                try:
+                    r, v = fut.result()
+                except Exception as e:
+                    print(f"  [error]: {e}")
+                    continue
+                w.writerow({"modelo": args.modelo, "quechua": r["quechua"],
+                            "real": r["real"], "llm": r["llm"],
+                            **{k: v[k] for k in
+                               ("adecuacion", "completitud", "fluidez", "similitud",
+                                "justificacion")}})
+                f.flush()
+                for k in sumas:
+                    sumas[k] += v[k]
+                n += 1
+                if n % 50 == 0:
+                    print(f"  {n}/{len(pendientes)}  "
+                          f"ade={sumas['adecuacion']/n:.2f} "
+                          f"com={sumas['completitud']/n:.2f} "
+                          f"flu={sumas['fluidez']/n:.2f} "
+                          f"sim={sumas['similitud']/n:.0f}")
     finally:
         f.close()
     if n:
         print(f"\nPromedios ({n} nuevas): "
               f"adecuacion={sumas['adecuacion']/n:.2f}, "
               f"completitud={sumas['completitud']/n:.2f}, "
-              f"fluidez={sumas['fluidez']/n:.2f}")
+              f"fluidez={sumas['fluidez']/n:.2f}, "
+              f"similitud={sumas['similitud']/n:.0f}/100")
     print(f"Guardado en {out}")
 
 

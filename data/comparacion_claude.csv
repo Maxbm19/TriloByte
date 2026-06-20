@@ -1,10 +1,10 @@
 modelo,quechua,real,llm,sim_lexica,sim_semantica,coincide
-claude-opus-4-8,jawa,Afuera. Fuera del sitio en que uno está,"Afuera, en la parte exterior",0.507,0.538,False
+claude-opus-4-8,jawa,Afuera. Fuera del sitio en que uno está,"Afuera, en la parte exterior",0.507,0.538,True
 claude-opus-4-8,aspakay,Acción de dar ofrenda a la divinidad con fiesta,Escarbar o remover la tierra,0.427,0.068,False
 claude-opus-4-8,piqtuy,Mezclar. Desordenar lo que ya estaba en orden,"Mezclar, revolver lo ordenado",0.486,0.652,True
 claude-opus-4-8,muskiykachay,Oliscar. Oler algo con cuidado y persistencia,Olfatear repetidamente buscando algo,0.519,0.439,False
 claude-opus-4-8,maray,"Derribar. Echar abajo, tirar al suelo","Batán, piedra plana de moler",0.4,0.18,False
-claude-opus-4-8,kikinchay,Identificar. Hacer que dos o más cosas aparezcan como una misma,"Identificar, considerar idéntico",0.442,0.572,False
+claude-opus-4-8,kikinchay,Identificar. Hacer que dos o más cosas aparezcan como una misma,"Identificar, considerar idéntico",0.442,0.572,True
 claude-opus-4-8,janaq,"Alto. Elevado, superior, arriba","Arriba, lo alto, lo superior",0.821,0.715,True
 claude-opus-4-8,ch'uwa,Privación de algo necesario o útil,"Claro, transparente, limpio (líquido)",0.394,0.109,False
 claude-opus-4-8,thanta,Trapo. Pedazo de tela desechado por viejo,"Trapo viejo, harapo, andrajo",0.551,0.657,True
@@ -20,19 +20,19 @@ claude-opus-4-8,tutayay,Anochecer. Llegar la noche,"Anochecer, oscurecer",0.565,
 claude-opus-4-8,mañaqay,Pedir la mano de la novia,"Pedir, solicitar la mano de la novia",0.842,0.948,True
 claude-opus-4-8,ura,"Bajo, -ja. Lo que está en un lugar inferior","Abajo, lo que está debajo",0.618,0.733,True
 claude-opus-4-8,pukayachiy,Abochornar. Sonrojar,"Sonrojar, hacer poner rojo",0.609,0.733,True
-claude-opus-4-8,allinchana,Normalización,"Mejoramiento, arreglo, normalización",1.0,0.555,False
-claude-opus-4-8,khiwiy,"Envolver. Enovillar, arrollar","Enrollar, envolver, torcer",0.618,0.578,False
+claude-opus-4-8,allinchana,Normalización,"Mejoramiento, arreglo, normalización",1.0,0.555,True
+claude-opus-4-8,khiwiy,"Envolver. Enovillar, arrollar","Enrollar, envolver, torcer",0.618,0.578,True
 claude-opus-4-8,thaparaku,Mariposa nocturna de gran tamaño,"Polilla, mariposa nocturna grande",0.738,0.705,True
 claude-opus-4-8,q'atayay,"Enturbiarse, volverse turbio un líquido",Enturbiarse un líquido,0.721,0.89,True
-claude-opus-4-8,puchuy,Sobrar. Haber más de lo necesario,"Sobrar, quedar de más",0.63,0.634,False
+claude-opus-4-8,puchuy,Sobrar. Haber más de lo necesario,"Sobrar, quedar de más",0.63,0.634,True
 claude-opus-4-8,khapa,Zancada. Paso largo,"Zancada, paso largo",0.947,0.927,True
 claude-opus-4-8,mamuy,Pasar las manos por la superficie de un montón de cereales,Pasar la mano por una superficie,0.836,0.328,False
 claude-opus-4-8,q'achu,Hierba verde que se da a los animales herbívoros,"Hierba verde, pasto, forraje",0.5,0.692,True
-claude-opus-4-8,jamyayay,"Volverse insípido, sin sabor","Volverse insípido, desabrido",0.857,0.572,False
-claude-opus-4-8,intichaw,Domingo. Día domingo,Domingo,1.0,0.588,False
+claude-opus-4-8,jamyayay,"Volverse insípido, sin sabor","Volverse insípido, desabrido",0.857,0.572,True
+claude-opus-4-8,intichaw,Domingo. Día domingo,Domingo,1.0,0.588,True
 claude-opus-4-8,sika sika,Oruga. Larva vermiforme de mariposa,"Oruga, larva",0.588,0.813,True
 claude-opus-4-8,ituray,Retirar la olla del fogón,Bajar la olla del fogón,0.85,0.926,True
-claude-opus-4-8,rimaysiq,Intercesor,"Intercesor, el que habla por otro",0.465,0.571,False
+claude-opus-4-8,rimaysiq,Intercesor,"Intercesor, el que habla por otro",0.465,0.571,True
 claude-opus-4-8,q'iquy,"Hacer flecos, grecas, etc",Hacer flecos o grecas,0.826,0.927,True
 claude-opus-4-8,pallquy,Defraudar. Hacer farsa,"Ramificarse, bifurcarse",0.444,0.187,False
 claude-opus-4-8,chaqnay,Cargar. Poner o echar peso sobre una bestia,Cargar peso sobre un animal,0.657,0.679,True
@@ -41,9 +41,9 @@ claude-opus-4-8,juñu,Conjunto. Reunión de personas o cosas,"Conjunto, reunión
 claude-opus-4-8,sayariy,Dejar la cama en las mañanas,"Levantarse, ponerse de pie",0.37,0.297,False
 claude-opus-4-8,ch'irma,"Zozobra. Intranquilidad, desasosiego, inquietud","Intranquilidad, desasosiego",0.73,0.882,True
 claude-opus-4-8,phutichiy,Atribular,"Afligir, entristecer",0.345,0.162,False
-claude-opus-4-8,ruk'iy,Tupir. Apretar mucho una cosa,"Apretar el tejido, tupir",0.604,0.579,False
+claude-opus-4-8,ruk'iy,Tupir. Apretar mucho una cosa,"Apretar el tejido, tupir",0.604,0.579,True
 claude-opus-4-8,llaksay,Fundir metales,Fundir metales,1.0,1.0,True
-claude-opus-4-8,ch'allay,Rociar. Esparcir en gotas menudas un líquido,"Rociar líquido, asperjar (ofrenda)",0.564,0.602,False
+claude-opus-4-8,ch'allay,Rociar. Esparcir en gotas menudas un líquido,"Rociar líquido, asperjar (ofrenda)",0.564,0.602,True
 claude-opus-4-8,chaya,"Cocción, cocimiento","Cocción, cocido",0.824,0.874,True
 claude-opus-4-8,maywanakuy,Amarse apasionadamente,"Amarse, abrazarse con pasión",0.52,0.845,True
 claude-opus-4-8,phiña,"Enojado, -da. Persona renegada o colérica","Enojado, molesto, colérico",0.627,0.469,False
@@ -53,14 +53,14 @@ claude-opus-4-8,jamp'atu,Sapo,Sapo,1.0,1.0,True
 claude-opus-4-8,siklla kay,"Hermosura. Belleza, calidad de hermoso","Hermosura, belleza",0.607,0.855,True
 claude-opus-4-8,puka,"Rojo, -ja. De color parecida a la sangre","Rojo, color rojo",0.815,0.711,True
 claude-opus-4-8,usqha kay,Rapidez. Velocidad impetuosa,"Rapidez, ser veloz",0.522,0.863,True
-claude-opus-4-8,ruq'a,Prudente. Que obra y tiene prudencia,"Persona prudente, sensata",0.525,0.603,False
+claude-opus-4-8,ruq'a,Prudente. Que obra y tiene prudencia,"Persona prudente, sensata",0.525,0.603,True
 claude-opus-4-8,khuyay,Compasión,"Compasión, apiadarse, amar con ternura",0.383,0.358,False
 claude-opus-4-8,sanampa,Signo alfabético,"Signo, letra, símbolo",0.432,0.487,False
 claude-opus-4-8,raymichay,"Festejar. Conmemorar, celebrar con fiestas","Festejar, celebrar con fiesta",0.789,0.915,True
-claude-opus-4-8,llust'iy,"Desollar. Despellejar, escoriar","Despellejar, pelar",0.8,0.621,False
+claude-opus-4-8,llust'iy,"Desollar. Despellejar, escoriar","Despellejar, pelar",0.8,0.621,True
 claude-opus-4-8,paqar,Madrugada. Alba,"Madrugada, amanecer, alba",0.7,0.378,False
 claude-opus-4-8,ch'aqchu,"Rociadura, salpicadura","Salpicadura, rociadura",0.955,0.85,True
-claude-opus-4-8,k'aspiyay,"Adelgazarse, enflaquecer","Adelgazar, ponerse flaco como un palo",0.557,0.51,False
+claude-opus-4-8,k'aspiyay,"Adelgazarse, enflaquecer","Adelgazar, ponerse flaco como un palo",0.557,0.51,True
 claude-opus-4-8,muskiy,Oler. Percibir los olores,"Oler, percibir olores",0.87,0.911,True
 claude-opus-4-8,k'acha,"Gustoso, agradable","Bonito, agradable, gustoso",0.773,0.773,True
 claude-opus-4-8,wakiñiqpi,Algunas veces,"A veces, algunas veces",1.0,0.794,True
@@ -68,15 +68,15 @@ claude-opus-4-8,sayt'uchay,"Alargar. Estirar, hacer más largo","Alargar, estira
 claude-opus-4-8,pata pata,"Superficial, ligero","Escalonado, en gradas",0.35,0.315,False
 claude-opus-4-8,manti,"Suave al gusto, delicioso. Carne tierna",Carne tierna y sabrosa,0.706,0.819,True
 claude-opus-4-8,qhari wawa,Hijo de la mujer,"Hijo varón, hijo de la mujer",1.0,0.88,True
-claude-opus-4-8,chulluy,Remojarse,"Remojarse, empaparse, derretirse",0.439,0.526,False
-claude-opus-4-8,mich'akuy,Escatimar. Dar con mezquindad,"Ser tacaño, escatimar",0.48,0.536,False
+claude-opus-4-8,chulluy,Remojarse,"Remojarse, empaparse, derretirse",0.439,0.526,True
+claude-opus-4-8,mich'akuy,Escatimar. Dar con mezquindad,"Ser tacaño, escatimar",0.48,0.536,True
 claude-opus-4-8,ayma,Procesión; acto de ir ordenadamente de un lugar a otro,"Procesión, danza ceremonial",0.487,0.414,False
 claude-opus-4-8,quncha,"Sobrino de varón, hijo o hija de la hermana",Sobrino (hijo de la hermana de un varón),0.857,0.808,True
 claude-opus-4-8,suysuna,"Cernidor. Cedazo, criba","Cernidor, colador, cedazo",0.75,0.796,True
 claude-opus-4-8,paqpa,"Cana, cabello blanco","Maguey, planta de agave",0.372,0.241,False
 claude-opus-4-8,chhira,"Azadón. Crespo, -pa. Rizado, ensortijado de cabellos","Cabello crespo, rizado",0.595,0.753,True
 claude-opus-4-8,machu pikchu,"La gran ciudadela pétrea, monumento religioso del incanato","Machu Picchu, antigua ciudadela inca de piedra",0.481,0.465,False
-claude-opus-4-8,qullqi,"Plata. Metal precioso, blanco, brillante y sonoro","Plata, dinero, metal precioso",0.615,0.624,False
+claude-opus-4-8,qullqi,"Plata. Metal precioso, blanco, brillante y sonoro","Plata, dinero, metal precioso",0.615,0.624,True
 claude-opus-4-8,majichiy,"Aburrir. Hastiar, cansar, molestar, fastidiar","Aburrir, fastidiar, molestar",0.767,0.868,True
 claude-opus-4-8,yachaqay,"Aprender, adquirir el conocimiento de una cosa","Aprender, adquirir conocimiento",1.0,0.836,True
 claude-opus-4-8,sunqunnay,Descorazonar. Arrancar el corazón,"Descorazonar, quitar el corazón",0.719,0.825,True
@@ -86,16 +86,16 @@ claude-opus-4-8,pampa runa,"Hombre común, persona común","Hombre común, gente
 claude-opus-4-8,kikinchay,Igualar. Poner al igual,"Igualar, hacer igual",0.698,0.822,True
 claude-opus-4-8,muthuchay,Embotar. Quitar filo,"Embotar, quitar el filo",0.884,0.815,True
 claude-opus-4-8,pacha,"Universo, cosmos, mundo","Mundo, tiempo, espacio, universo",0.655,0.771,True
-claude-opus-4-8,t'aqmay,"Desbaratar. De hacer, desquiciar","Desbaratar, deshacer",0.731,0.582,False
+claude-opus-4-8,t'aqmay,"Desbaratar. De hacer, desquiciar","Desbaratar, deshacer",0.731,0.582,True
 claude-opus-4-8,sut'ichay,Explicar. Aclarar las causas,"Aclarar, explicar, esclarecer",0.667,0.708,True
 claude-opus-4-8,rumi sunqu,Empedernido. Insensible que no siente dolor ni lástima,"De corazón de piedra, insensible",0.513,0.447,False
 claude-opus-4-8,mankuy,"Trozar, cortar madera en pedazos",Cortar madera en trozos,0.821,0.891,True
 claude-opus-4-8,kay,"Ser, existir","Ser, estar, existir",1.0,0.938,True
-claude-opus-4-8,yukra,Camarón. Crustáceo marino comestible,Camarón,0.326,0.629,False
-claude-opus-4-8,wiñay,Crecer. Tomar aumento sensible los cuerpos naturales,"Crecer, desarrollarse; eternamente",0.442,0.541,False
+claude-opus-4-8,yukra,Camarón. Crustáceo marino comestible,Camarón,0.326,0.629,True
+claude-opus-4-8,wiñay,Crecer. Tomar aumento sensible los cuerpos naturales,"Crecer, desarrollarse; eternamente",0.442,0.541,True
 claude-opus-4-8,imanay,Hacer o suceder alguna cosa,"Hacer algo, qué hacer",0.571,0.455,False
 claude-opus-4-8,chichi,Carne,Carne,1.0,1.0,True
-claude-opus-4-8,jatunpuquy killa,Febrero. Ver mes,Febrero (mes de la gran maduración),0.392,0.6,False
-claude-opus-4-8,khachi,Dícese del alimento mezclado con tierra,Comida con tierra o arena,0.594,0.62,False
-claude-opus-4-8,khuchichay,Hacer inmunda o sucia una cosa,"Ensuciar, hacer sucio",0.549,0.588,False
+claude-opus-4-8,jatunpuquy killa,Febrero. Ver mes,Febrero (mes de la gran maduración),0.392,0.6,True
+claude-opus-4-8,khachi,Dícese del alimento mezclado con tierra,Comida con tierra o arena,0.594,0.62,True
+claude-opus-4-8,khuchichay,Hacer inmunda o sucia una cosa,"Ensuciar, hacer sucio",0.549,0.588,True
 claude-opus-4-8,thantay,"Usar. Utilizar, envejecer alguna cosa","Usar hasta gastar, envejecer (ropa)",0.611,0.703,True

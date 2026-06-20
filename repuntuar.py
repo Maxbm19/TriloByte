@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 EMB_MODEL = "hiiamsid/sentence_similarity_spanish_es"
-UMBRAL = 0.65
+UMBRAL = 0.50  # calibrado para hiiamsid (español): donde empieza la equivalencia de significado
 
 
 def repuntuar(path: Path):

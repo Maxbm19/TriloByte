@@ -14,7 +14,7 @@ from pathlib import Path
 
 MODELO = "claude-opus-4-8"
 OUT = Path("data/comparacion_claude.csv")
-UMBRAL = 0.65
+UMBRAL = 0.50
 
 # (quechua, real[del diccionario, solo para puntuar], claude[mi traducción])
 DATOS = [

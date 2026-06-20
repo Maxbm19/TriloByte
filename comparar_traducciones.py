@@ -47,7 +47,7 @@ except ImportError:  # fallback sin dependencia extra
 
 CSV_PATH = Path("data/diccionario_quechua_castellano.csv")
 OUT_PATH = Path("data/comparacion_llm.csv")
-UMBRAL = 0.65        # similitud SEMÁNTICA >= se considera "coincide"
+UMBRAL = 0.50        # similitud SEMÁNTICA >= se considera "coincide" (calibrado para el modelo español)
 PAUSA = 12.0         # seg entre requests (~5/min, estable bajo el límite gratis de 2.5-flash)
 SEED = 42            # semilla del muestreo aleatorio (reproducible)
 EMB_MODEL = "hiiamsid/sentence_similarity_spanish_es"  # fuerte, específico de español

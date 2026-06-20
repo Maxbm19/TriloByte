@@ -15,38 +15,62 @@ del diccionario usando **similitud semántica** (embeddings de español).
 
 ## Resultados
 
-Coincidencia = la definición del LLM tiene similitud semántica ≥ **0.65** con la
+Coincidencia = la definición del LLM tiene similitud semántica ≥ **0.50** con la
 del diccionario (coseno entre embeddings de español, modelo
-`hiiamsid/sentence_similarity_spanish_es`). Todas las muestras usan la misma
-semilla (`seed=42`), así que los modelos se evalúan sobre las mismas palabras.
+`hiiamsid/sentence_similarity_spanish_es`). El umbral **0.50 se calibró con datos**:
+es el punto donde, para este modelo, las definiciones empiezan a ser de verdad
+equivalentes en significado (por debajo aparecen errores; por encima, sinónimos
+correctos). Todas las muestras usan la misma semilla (`seed=42`), así que los
+modelos se evalúan sobre las mismas palabras.
 
 | Modelo                  | Coincidencia | Muestra | Nota |
 |-------------------------|:------------:|:-------:|------|
-| `claude-opus-4-8`       | 57 %         | 100     | con referencia a la vista (anchoring) |
-| `gemini-2.5-flash`      | 12 %         | 16      | a ciegas |
-| `gemini-2.5-flash-lite` | 5 %          | 22      | a ciegas |
-| `claude-haiku-4-5`      | 4 %          | **833** | a ciegas |
+| `claude-opus-4-8`       | 79 %         | 100     | con referencia a la vista (anchoring) |
+| `gemini-2.5-flash-lite` | 32 %         | 22      | a ciegas |
+| `gemini-2.5-flash`      | 25 %         | 16      | a ciegas |
+| `claude-haiku-4-5`      | **10 %**     | **833** | a ciegas |
 
 > ⚠️ Dos advertencias clave:
-> 1. **El umbral 0.65 es relativo al modelo de embeddings.** El modelo español da
->    cosenos más bajos en valor absoluto que un multilingüe genérico, así que los
->    porcentajes son conservadores. Lo robusto es el **orden** (opus ≫ gemini ≫
->    haiku) y la curva `precision_por_umbral`, no el número suelto.
+> 1. **El umbral 0.50 es relativo a este modelo de embeddings.** Se calibró
+>    inspeccionando ejemplos; con otro modelo de embeddings habría que recalibrarlo.
+>    Lo robusto es el **orden** (opus ≫ gemini ≫ haiku) y la curva
+>    `precision_por_umbral`, no el número suelto.
 > 2. **`claude-opus-4-8` se midió con la referencia visible** (sesgo de anchoring),
 >    así que su 57 % no es comparable de igual a igual con los demás (a ciegas).
 >
 > Conclusión robusta: los LLM entienden **poco** el quechua boliviano, y los
 > modelos chicos (haiku, flash-lite) entienden **aún menos**.
 
+### Segunda evaluación: LLM como juez
+
+Además del embedding, un **LLM juez independiente** (`claude-opus-4-8`, distinto y
+superior al traductor para evitar sesgo de auto-preferencia) califica cada
+definición de 1 a 5 en tres métricas. Sobre las **833** traducciones de
+`claude-haiku-4-5`:
+
+| Métrica (1–5) | Media | Lectura |
+|---------------|:-----:|---------|
+| **Fluidez**     | **4.21** | el español suena natural |
+| Adecuación      | 1.73 | …pero el significado casi siempre está mal |
+| Completitud     | 1.66 | …y cubre poco del sentido real |
+
+> **Hallazgo central:** los modelos producen español **fluido pero incorrecto** —
+> "alucinación segura" en una lengua de bajos recursos. Las dos evaluaciones
+> **concuerdan** (a mayor nota del juez, mayor similitud del embedding; ρ Spearman
+> = 0.48), así que la baja calidad es real, no un artefacto de la métrica.
+
 Las figuras estilo *paper* se generan en [`figs/`](figs/):
 
-| | |
+| Figura | Qué muestra |
 |---|---|
 | `distribucion_similitud`  | histograma + densidad (KDE) de la similitud semántica |
 | `lexica_vs_semantica`     | dispersión con densidad y marginales: la léxica subestima |
 | `precision_por_umbral`    | sensibilidad de la coincidencia al umbral, por modelo |
 | `similitud_por_categoria` | calidad por categoría gramatical (con IC 95 %) |
 | `comparacion_modelos`     | % de coincidencia por modelo |
+| `juez_distribucion`       | distribución de las notas del juez (1–5) por métrica |
+| `juez_promedios`          | nota media por métrica (± IC 95 %) |
+| `juez_vs_embedding`       | el juez vs. el embedding concuerdan (validación cruzada) |
 
 ## Cómo funciona
 
@@ -107,8 +131,13 @@ uv run python comparar_openrouter.py --n 50 --modelos meta-llama/llama-3.3-70b-i
 # 2c. Puntuar las traducciones de Claude (sin API; ver nota abajo)
 uv run python puntuar_claude.py
 
-# 3. Generar las figuras
+# 2d. Traducir con Claude (modelo más barato)
+uv run python comparar_traducciones.py --proveedor claude --modelos claude-haiku-4-5 --n 1000
+
+# 3. Evaluar con el LLM juez (opus-4-8, concurrente) y generar figuras
+uv run python juez_llm.py --modelo claude-haiku-4-5
 uv run python graficos.py
+uv run python graficos_juez.py
 ```
 
 Los scripts de comparación **guardan el progreso y son reanudables**: si una
@@ -140,14 +169,15 @@ parse_respuestas.py        Puntúa respuestas pegadas del chat (sin API)
 repuntuar.py               Re-puntúa CSV con el embedding español (sin API)
 juez_llm.py                LLM-as-judge (opus-4-8) — 3 métricas por traducción
 recuperar_flash.py         Recupera filas de Gemini desde un log (utilidad)
-graficos.py                Genera las figuras estilo paper
+graficos.py                Genera las figuras de similitud (embedding)
+graficos_juez.py           Genera las figuras del LLM juez
 data/                      PDF, diccionario CSV y CSVs de comparación
 figs/                      Figuras generadas (PNG 300 DPI + PDF)
 ```
 
 ## Metodología y límites
 
-- La **coincidencia** se define con umbral semántico fijo (0.65); `graficos.py`
+- La **coincidencia** se define con umbral semántico calibrado (0.50); `graficos.py`
   muestra qué tan sensible es la precisión a ese valor.
 - La métrica léxica se incluye solo para ilustrar que **subestima** la calidad
   (penaliza sinónimos correctos); no se usa para decidir aciertos.

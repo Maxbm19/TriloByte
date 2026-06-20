@@ -2,29 +2,29 @@ modelo,quechua,real,llm,sim_lexica,sim_semantica,coincide
 gemini-2.5-flash-lite,jawa,Afuera. Fuera del sitio en que uno está,Parte superior o encima de algo.,0.429,0.118,False
 gemini-2.5-flash-lite,aspakay,Acción de dar ofrenda a la divinidad con fiesta. Aspecto que presenta el cielo cuando hay nubes tenues y de varios matices. Arrebol color rojo de las nubes heridas por los rayos del sol,Aspakay: Acción de desgranar o separar los granos de un cereal o legumbre de su mazorca o vaina.,0.465,0.157,False
 gemini-2.5-flash-lite,piqtuy,Mezclar. Desordenar lo que ya estaba en orden,Acción de doblar o plegar algo.,0.427,0.241,False
-gemini-2.5-flash-lite,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,Hacer que alguien o algo huela o tenga un olor agradable.,0.496,0.585,False
+gemini-2.5-flash-lite,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,Hacer que alguien o algo huela o tenga un olor agradable.,0.496,0.585,True
 gemini-2.5-flash-lite,maray,"Derribar. Echar abajo, tirar al suelo",Maray: Persona o animal que tiene la piel o el pelaje de color blanco.,0.404,0.061,False
-gemini-2.5-flash-lite,kikinchay,Identificar. Hacer que dos o más cosas que en realidad son distintas aparezcan y se consideren como una misma,"Diferencia, distinción o particularidad que hace a algo o alguien único.",0.494,0.605,False
-gemini-2.5-flash-lite,janaq,"Alto. Elevado, superior, arriba","Cielo, parte superior, arriba.",0.711,0.606,False
+gemini-2.5-flash-lite,kikinchay,Identificar. Hacer que dos o más cosas que en realidad son distintas aparezcan y se consideren como una misma,"Diferencia, distinción o particularidad que hace a algo o alguien único.",0.494,0.605,True
+gemini-2.5-flash-lite,janaq,"Alto. Elevado, superior, arriba","Cielo, parte superior, arriba.",0.711,0.606,True
 gemini-2.5-flash-lite,ch'uwa,Privación de algo necesario o útil,"Prenda de vestir tejida, generalmente de lana, de colores vivos y diseños geométricos.",0.372,0.094,False
 gemini-2.5-flash-lite,thanta,Trapo. Pedazo de tela desechado por viejo,"Cosa seca, deshidratada o marchita.",0.427,0.218,False
-gemini-2.5-flash-lite,ayllu suti,Apellido. Nombre de familia,Nombre de la comunidad o grupo familiar.,0.606,0.564,False
+gemini-2.5-flash-lite,ayllu suti,Apellido. Nombre de familia,Nombre de la comunidad o grupo familiar.,0.606,0.564,True
 gemini-2.5-flash-lite,awqay,"Guerrear, hacer guerra","Enemigo, adversario.",0.341,0.259,False
 gemini-2.5-flash-lite,iñu,Nigua. Insecto parecido a la pulga que se introduce en especial al pie del hombre o en la pata de los animales,Creencia o fe.,0.205,-0.036,False
-gemini-2.5-flash-lite,manchariy,Asustarse,Sentir temor o espanto.,0.323,0.588,False
+gemini-2.5-flash-lite,manchariy,Asustarse,Sentir temor o espanto.,0.323,0.588,True
 gemini-2.5-flash-lite,miniy,Tramar. Cruzar la rama con la urdimbre para tejer alguna tela,"Tener, poseer.",0.225,0.131,False
 gemini-2.5-flash-lite,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,Acción de hacer que algo se vuelva espeso o denso.,0.378,0.213,False
 gemini-2.5-flash-lite,ati,Adversidad. Desventura,"Poder, ser capaz de hacer algo.",0.385,0.136,False
 gemini-2.5-flash-lite,llat'a kay,Desnudez. Falta de vestido,Lentitud o tardanza en el movimiento o en la acción.,0.361,0.204,False
 gemini-2.5-flash-lite,tutayay,Anochecer. Llegar la noche,"Oscurecer, anochecer.",0.565,0.814,True
 gemini-2.5-flash-lite,mañaqay,Pedir la mano de la novia,Habilidad o destreza para hacer algo.,0.414,0.068,False
-gemini-2.5-flash-lite,ura,"Bajo, -ja. Lo que está en un lugar inferior respecto a otras cosas de la misma clase","Abajo, debajo.",0.227,0.527,False
+gemini-2.5-flash-lite,ura,"Bajo, -ja. Lo que está en un lugar inferior respecto a otras cosas de la misma clase","Abajo, debajo.",0.227,0.527,True
 gemini-2.5-flash-lite,allinchana,Normalización,allinchana: Adjetivo que indica algo que se puede mejorar o arreglar.,0.182,0.195,False
 gemini-2.5-flash-lite,khiwiy,"Envolver. Enovillar, arrollar",Retorcer o enrollar algo sobre sí mismo.,0.441,0.424,False
 gemini-2.5-flash,jawa,"Sitio, lugar, superficie, parte. Tawantinsuyuqa tawa jawapi t'aqakun: Tahuantinsuyo se divide en cuatro partes",Parte exterior o superficie de un objeto…,0.42,0.233,False
 gemini-2.5-flash,aspakay,Acción de dar ofrenda a la divinidad con fiesta. Aspecto que presenta el cielo cuando hay nubes tenues y de varios matices. Arrebol color rojo de las nubes heridas por los rayos del sol,Hacer la señal de la cruz.…,0.37,0.179,False
 gemini-2.5-flash,piqtuy,"Embadurnar. Manchar, pintarrajear. piqu, k'ullu phislu",Preparar un plato andino que consiste en…,0.5,0.149,False
-gemini-2.5-flash,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,"Olfatear por aquí y por allá, generalmen…",0.57,0.523,False
+gemini-2.5-flash,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,"Olfatear por aquí y por allá, generalmen…",0.57,0.523,True
 gemini-2.5-flash,maray,"Abatir. Derribar, tumbar. Hacer que baje una cosa que antes tenía la posición vertical",Piedra grande y plana utilizada para mol…,0.4,0.12,False
 gemini-2.5-flash,kikinchay,Igualar. Poner al igual,Establecer la identidad o igualdad de al…,0.45,0.365,False
 gemini-2.5-flash,janaq,"Alto. Elevado, superior, arriba","Relativo a la parte superior, a la altur…",0.56,0.457,False
@@ -33,7 +33,7 @@ gemini-2.5-flash,thanta,"Raído, -da. Dícese de cualquier tela muy gastada por 
 gemini-2.5-flash,ayllu suti,Apellido. Nombre de familia,Nombre que identifica a una comunidad o…,0.5,0.279,False
 gemini-2.5-flash,awqay,"Guerrear, hacer guerra",Hacer la guerra.…,0.89,0.736,True
 gemini-2.5-flash,iñu,Nigua. Insecto parecido a la pulga que se introduce en especial al pie del hombre o en la pata de los animales,Designa una cantidad mínima o una pizca…,0.41,0.184,False
-gemini-2.5-flash,manchariy,Asustarse,Acción de causar miedo o espanto.…,0.34,0.517,False
+gemini-2.5-flash,manchariy,Asustarse,Acción de causar miedo o espanto.…,0.34,0.517,True
 gemini-2.5-flash,miniy,Tramar. Cruzar la rama con la urdimbre para tejer alguna tela,"Cargar en la espalda, particularmente un…",0.42,0.125,False
 gemini-2.5-flash,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,"Acto de garabatear, dibujar o escribir d…",0.39,0.219,False
 gemini-2.5-flash,ati,"Posibilidad, calidad de posible",Tener la capacidad o el poder para reali…,0.31,0.325,False
@@ -42,16 +42,16 @@ claude-haiku-4-5,aspakay,Acción de dar ofrenda a la divinidad con fiesta. Aspec
 claude-haiku-4-5,piqtuy,Mezclar. Desordenar lo que ya estaba en orden,Acción de pellizcar o apretujarse con los dedos.,0.391,0.072,False
 claude-haiku-4-5,muskiykachay,Oliscar. Oler algo con cuidado y persistencia y buscar por el olfato una cosa,Acción de hacer dormir o adormecer a alguien.,0.403,0.187,False
 claude-haiku-4-5,maray,"Derribar. Echar abajo, tirar al suelo",Movimiento giratorio o rotación de algo alrededor de un eje.,0.387,0.162,False
-claude-haiku-4-5,kikinchay,Identificar. Hacer que dos o más cosas que en realidad son distintas aparezcan y se consideren como una misma,Acción de reconocerse o identificarse a uno mismo.,0.468,0.507,False
+claude-haiku-4-5,kikinchay,Identificar. Hacer que dos o más cosas que en realidad son distintas aparezcan y se consideren como una misma,Acción de reconocerse o identificarse a uno mismo.,0.468,0.507,True
 claude-haiku-4-5,janaq,"Alto. Elevado, superior, arriba",Cielo o parte superior del universo donde residen los astros.,0.44,0.203,False
 claude-haiku-4-5,ch'uwa,Privación de algo necesario o útil,Sustancia pegajosa o viscosa que se obtiene de ciertos árboles o plantas.,0.385,0.147,False
 claude-haiku-4-5,thanta,Trapo. Pedazo de tela desechado por viejo,Masa de harina de maíz cocida al vapor envuelta en hojas de choclo.,0.416,0.062,False
-claude-haiku-4-5,ayllu suti,Apellido. Nombre de familia,Nombre o apellido que identifica a un grupo de familias emparentadas que forman una comunidad andina.,0.5,0.509,False
+claude-haiku-4-5,ayllu suti,Apellido. Nombre de familia,Nombre o apellido que identifica a un grupo de familias emparentadas que forman una comunidad andina.,0.5,0.509,True
 claude-haiku-4-5,awqay,"Guerrear, hacer guerra",Acto de enemistarse o de tener enemistad con alguien.,0.338,0.21,False
 claude-haiku-4-5,iñu,Nigua. Insecto parecido a la pulga que se introduce en especial al pie del hombre o en la pata de los animales,Sustancia pegajosa o viscosa que se encuentra en algunas plantas y animales.,0.514,0.356,False
-claude-haiku-4-5,manchariy,Asustarse,Tener miedo o temor ante algo.,0.211,0.59,False
+claude-haiku-4-5,manchariy,Asustarse,Tener miedo o temor ante algo.,0.211,0.59,True
 claude-haiku-4-5,miniy,Tramar. Cruzar la rama con la urdimbre para tejer alguna tela,Acto de orinar o expulsar la orina del cuerpo.,0.485,-0.051,False
-claude-haiku-4-5,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,Acción de bañarse o lavarse el cuerpo con agua.,0.437,0.603,False
+claude-haiku-4-5,yaqch'ikuy,Lavarse ligeramente las manos o los dedos,Acción de bañarse o lavarse el cuerpo con agua.,0.437,0.603,True
 claude-haiku-4-5,ati,Adversidad. Desventura,Poder o capacidad para hacer algo.,0.327,0.225,False
 claude-haiku-4-5,llat'a kay,Desnudez. Falta de vestido,"Estar torcido, sesgado o inclinado hacia un lado.",0.378,0.133,False
 claude-haiku-4-5,tutayay,Anochecer. Llegar la noche,Oscurecer o llegar la noche.,0.83,0.792,True
@@ -87,9 +87,9 @@ claude-haiku-4-5,maywanakuy,Amarse apasionadamente,Acto de encontrarse o reunirs
 claude-haiku-4-5,phiña,"Enojado, -da. Dícese de la persona renegada o colérica",Enojo o rabia que siente una persona.,0.489,0.475,False
 claude-haiku-4-5,ch'isiyay,Anochecer. Llegar la noche,Resfriar o enfriar algo mediante la exposición al aire o al viento.,0.368,0.3,False
 claude-haiku-4-5,mintuy,Hacer envoltorio,Acción de mentir o engañar a alguien con palabras falsas.,0.278,0.195,False
-claude-haiku-4-5,jamp'atu,Sapo,Sapo o rana de gran tamaño que habita en zonas húmedas y pantanosas.,1.0,0.513,False
+claude-haiku-4-5,jamp'atu,Sapo,Sapo o rana de gran tamaño que habita en zonas húmedas y pantanosas.,1.0,0.513,True
 claude-haiku-4-5,siklla kay,"Hermosura. Belleza, calidad de hermoso",Estar avergonzado o tener vergüenza.,0.356,0.065,False
-claude-haiku-4-5,puka,"Rojo, -ja. De color parecida a la sangre",De color rojo o que tiene la cualidad de ser rojo.,0.617,0.589,False
+claude-haiku-4-5,puka,"Rojo, -ja. De color parecida a la sangre",De color rojo o que tiene la cualidad de ser rojo.,0.617,0.589,True
 claude-haiku-4-5,usqha kay,Rapidez. Velocidad impetuosa,"Permanecer o estar escondido, oculto o fuera de vista.",0.329,0.205,False
 claude-haiku-4-5,ruq'a,Prudente. Que obra y tiene prudencia,Piedra o roca de tamaño considerable.,0.333,0.068,False
 claude-haiku-4-5,khuyay,Compasión,"Sentimiento de nostalgia, melancolía o tristeza por algo o alguien que se echa de menos.",0.154,0.126,False
@@ -105,7 +105,7 @@ claude-haiku-4-5,wakiñiqpi,Algunas veces,Situación de estar enfermo o padecien
 claude-haiku-4-5,sayt'uchay,"Alargar. Estirar, hacer más largo",Hacer saltar o brincar algo o a alguien.,0.514,0.228,False
 claude-haiku-4-5,pata pata,"Superficial, ligero",Plataforma o terraza construida en las laderas de las montañas para el cultivo agrícola.,0.216,0.077,False
 claude-haiku-4-5,manti,"Suave al gusto, delicioso. / Carne tierna, carne deliciosa.: Manti aycha",Masa de harina de maíz o papa cocida en caldo.,0.37,0.287,False
-claude-haiku-4-5,qhari wawa,Hijo de la mujer,Niño varón o hijo de sexo masculino.,0.609,0.563,False
+claude-haiku-4-5,qhari wawa,Hijo de la mujer,Niño varón o hijo de sexo masculino.,0.609,0.563,True
 claude-haiku-4-5,chulluy,Remojarse,Envoltorio o bolsa de tela tejida que se usa para llevar carga a la espalda.,0.167,0.204,False
 claude-haiku-4-5,mich'akuy,Escatimar. Dar con mezquindad,Acción de limpiar o barrer algo con cuidado y minuciosidad.,0.46,0.213,False
 claude-haiku-4-5,ayma,"Procesión; acto de ir ordenadamente de un lugar a otro con algún fin público, cívico o religioso",Pronombre interrogativo que significa quién o cuál persona.,0.344,0.131,False
@@ -114,7 +114,7 @@ claude-haiku-4-5,suysuna,"Cernidor. Cedazo, criba",Esperar o aguardar a alguien 
 claude-haiku-4-5,paqpa,"Cana, cabello blanco",Parte posterior o trasera de algo.,0.34,0.126,False
 claude-haiku-4-5,chhira,"Azadón. chhiri (<A). K'upa, k'uspa, chhurku. adj. Crespo, -pa. Rizado, ensortijado de cabellos",Frío intenso o helada que daña las plantas y cosechas.,0.327,0.016,False
 claude-haiku-4-5,machu pikchu,"La gran ciudadela pétrea que fue quizá uno de los más grandes monumentos religiosos del incanato, entre el valle del Cusco y la selva virgen (JAL)","Ciudadela incaica ubicada en las alturas de los Andes peruanos, construida en el siglo XV como residencia real o santuario religioso.",0.567,0.737,True
-claude-haiku-4-5,qullqi,"Plata. Metal precioso, blanco, brillante y sonoro","Metal precioso, especialmente plata o dinero.",0.645,0.633,False
+claude-haiku-4-5,qullqi,"Plata. Metal precioso, blanco, brillante y sonoro","Metal precioso, especialmente plata o dinero.",0.645,0.633,True
 claude-haiku-4-5,majichiy,"Aburrir. Hastiar, cansar, molestar, fastidiar","Acción de atrapar, coger o asir algo con las manos.",0.421,0.088,False
 claude-haiku-4-5,yachaqay,"Aprender, adquirir el conocimiento de una cosa",Acción y efecto de aprender o enseñanza.,0.541,0.661,True
 claude-haiku-4-5,sunqunnay,Descorazonar. Arrancar el corazón,Amor o afecto que se siente hacia alguien.,0.351,0.189,False
@@ -126,7 +126,7 @@ claude-haiku-4-5,muthuchay,Embotar. Quitar filo,"Verbo que significa hincharse o
 claude-haiku-4-5,pacha,"Universo, cosmos, mundo","Tiempo, época o período determinado, o también espacio y lugar.",0.313,0.361,False
 claude-haiku-4-5,t'aqmay,"Desbaratar. De hacer, desquiciar",Acción de romper o quebrar algo en pedazos.,0.405,0.213,False
 claude-haiku-4-5,sut'ichay,Explicar. Aclarar las causas,Hacer que algo pierda su forma o se deforme por presión o golpe.,0.292,0.198,False
-claude-haiku-4-5,rumi sunqu,Empedernido. Insensible. Que no siente las cosas que causan dolor o mueven a lástima,"Persona de corazón duro o insensible, que carece de compasión.",0.536,0.569,False
+claude-haiku-4-5,rumi sunqu,Empedernido. Insensible. Que no siente las cosas que causan dolor o mueven a lástima,"Persona de corazón duro o insensible, que carece de compasión.",0.536,0.569,True
 claude-haiku-4-5,mankuy,"Trozar, cortar madera en pedazos",Acción de temer o sentir miedo ante algo o alguien.,0.425,0.066,False
 claude-haiku-4-5,kay,"Ser, existir","Palabra o cosa presente, cercana o actual en el espacio o tiempo.",0.222,0.375,False
 claude-haiku-4-5,yukra,Camarón. Crustáceo marino comestible,Planta herbácea de la región andina con hojas comestibles y sabor amargo.,0.537,0.134,False
@@ -151,8 +151,8 @@ claude-haiku-4-5,phutirayay,"Hallarse melancólico. phutirayay. s Melancolía, t
 claude-haiku-4-5,t'itu kay,Previsión. Acción de prever,Ser pequeño o de tamaño reducido.,0.407,0.086,False
 claude-haiku-4-5,khiki,"Acaro de la sarna. Arador, arácnido que produce la sarna",Pelo o cabello de la cabeza.,0.425,0.256,False
 claude-haiku-4-5,usthuy,Acurrucarse. Encogerse para resguardarse del frío o con otro objeto,Acción de romper o quebrar algo en pedazos.,0.44,0.097,False
-claude-haiku-4-5,akchiyay,Estornudar,Acto de escupir o expectorar saliva.,0.311,0.525,False
-claude-haiku-4-5,pakakuy,Esconderse,Acción y efecto de esconderse o ocultarse de la vista de otros.,1.0,0.588,False
+claude-haiku-4-5,akchiyay,Estornudar,Acto de escupir o expectorar saliva.,0.311,0.525,True
+claude-haiku-4-5,pakakuy,Esconderse,Acción y efecto de esconderse o ocultarse de la vista de otros.,1.0,0.588,True
 claude-haiku-4-5,yalli,Victoria. Triunfo sobre el adversario,"Planta herbácea de la región andina con flores amarillas, usada tradicionalmente en medicina.",0.341,0.037,False
 claude-haiku-4-5,adj y s,"Xilófago, -ga. Dícese de los insectos que roen la madera. k'ullu sunqu. Insensible, que no siente las cosas que causan lástima","No veo que hayas incluido la palabra quechua que necesitas que defina. Por favor, proporciona la palabra quechua y te daré su definición en español según tu formato solicitado.",0.429,0.076,False
 claude-haiku-4-5,yawarchay,Ensangrentar. Manchar con sangre,Hacer sangrar o sacar sangre a alguien o algo.,0.533,0.344,False
@@ -169,7 +169,7 @@ claude-haiku-4-5,jaway,"Nieto, nieta",Acto de lanzar o arrojar algo con fuerza h
 claude-haiku-4-5,runay kachay,Alardear. Hacer alarde,Conjunto de normas y reglas de conducta que rigen el comportamiento de las personas en la sociedad.,0.263,-0.001,False
 claude-haiku-4-5,qasi,Desocupado,Escarcha o hielo delgado que se forma en la superficie de la tierra durante las noches frías.,0.162,0.038,False
 claude-haiku-4-5,mullapa,Nudo muy complicado; nudo o amarro que se ha enredado; racimo compacto de flores o frutos,"Planta herbácea de flores amarillas, cuyas hojas y raíces se utilizan en medicina tradicional andina.",0.473,0.261,False
-claude-haiku-4-5,chuqay,"Arrojar, botar",Acción de tirar o lanzar algo con fuerza.,0.333,0.584,False
+claude-haiku-4-5,chuqay,"Arrojar, botar",Acción de tirar o lanzar algo con fuerza.,0.333,0.584,True
 claude-haiku-4-5,munaqi,"Amante. Enamorado, persona apasionada por otra",Persona que es amada o que despierta amor en otros.,0.543,0.67,True
 claude-haiku-4-5,ch'iraw mit'a,Verano. Estación calurosa que comprende entre primavera y otoño,Turno o vez para realizar trabajos de limpieza o mantenimiento de espacios comunes en la comunidad.,0.462,0.061,False
 claude-haiku-4-5,ch'usuy,Desinflarse. Salir el aire de algo inflado,Limpiar o barrer el suelo quitando la suciedad.,0.477,0.268,False
@@ -194,9 +194,9 @@ claude-haiku-4-5,mast'aray,"Declarar, confesar, explicar lo dudoso",Golpear o az
 claude-haiku-4-5,chharpa,"Chambón, de escasa habilidad",Prenda de lana tejida que se usa colgada sobre los hombros como abrigo o adorno tradicional andino.,0.286,0.006,False
 claude-haiku-4-5,q'apiy,"Estrujar. Apretar para extraer el jugo con las manos o con otro instrumento adecuado. q'apñusqa, t'añusqa, ñat'usqa. p.p. Abollado, aplastado",Acción de sujetar o agarrar algo con fuerza.,0.322,0.215,False
 claude-haiku-4-5,ararankha,Lagartija. Reptil de pequeño tamaño de la familia lacértidos,Planta herbácea de flores amarillas utilizada en la medicina tradicional andina.,0.456,0.003,False
-claude-haiku-4-5,mikhuy,Comer. Ingerir alimentos. Mikhuy,Comer o consumir alimentos.,0.69,0.594,False
+claude-haiku-4-5,mikhuy,Comer. Ingerir alimentos. Mikhuy,Comer o consumir alimentos.,0.69,0.594,True
 claude-haiku-4-5,mañapakuq,"Pedigüeño, -ña. Que pide con frecuencia",Persona que pide favor o ayuda a otra.,0.5,0.467,False
-claude-haiku-4-5,alliyay,Recobrar el enfermo la salud,"Mejorar o ponerse bien, recuperarse de una enfermedad o mal estado.",0.457,0.624,False
+claude-haiku-4-5,alliyay,Recobrar el enfermo la salud,"Mejorar o ponerse bien, recuperarse de una enfermedad o mal estado.",0.457,0.624,True
 claude-haiku-4-5,ch'api,Nombre asignado a perritos lanudos,"Herramienta de metal con forma de gancho o pala pequeña, utilizada para cavar o remover tierra.",0.325,0.032,False
 claude-haiku-4-5,churi qutu,El que tiene muchos hijos varones,Hijo varón en relación con su padre.,0.471,0.664,True
 claude-haiku-4-5,mich'a,"Tacaño, -ña. Miserable, mezquino",Sustancia pegajosa o viscosa que se adhiere a las superficies.,0.344,0.129,False
@@ -227,7 +227,7 @@ claude-haiku-4-5,jak'usapa,"Harinoso, -sa. Que tiene mucha harina",Persona que t
 claude-haiku-4-5,chhaku,"Manotada, manotazo que obliga a soltar lo que se tiene en la mano",Camino o sendero angosto que atraviesa terrenos montañosos o accidentados.,0.53,0.109,False
 claude-haiku-4-5,taki,Canto. Arte de cantar,Canción o música tradicional andina.,0.393,0.384,False
 claude-haiku-4-5,q'arqa,Andrajoso y sórdido,Roca grande y áspera que se encuentra en las montañas o terrenos elevados.,0.283,0.186,False
-claude-haiku-4-5,jatun juchayuq,"Malhechor, -ra. Que comete un delito",Persona que ha cometido un delito o falta grave.,0.627,0.524,False
+claude-haiku-4-5,jatun juchayuq,"Malhechor, -ra. Que comete un delito",Persona que ha cometido un delito o falta grave.,0.627,0.524,True
 claude-haiku-4-5,nak'ana,Res dispuesta para carnear,Golpear o pegar con los puños o las manos.,0.462,0.102,False
 claude-haiku-4-5,llakllachiy,Estremecer. Hacer temblar,Hacer que algo se arrugue o se marchite.,0.426,0.219,False
 claude-haiku-4-5,llachapay,Remendar,Enfermedad de la piel caracterizada por erupciones o llagas que causan picazón y descamación.,0.16,0.017,False
@@ -292,7 +292,7 @@ claude-haiku-4-5,qullipayay,"Importunar, fastidiar o incomodar con importunidade
 claude-haiku-4-5,mukmu,"Pimpollo. Vastago, renuevo",Acción de amasar o sobar masa con las manos.,0.348,0.038,False
 claude-haiku-4-5,pana,Hermana del hombre,"Amiga o compañera, especialmente la que tiene la misma edad o condición.",0.238,0.249,False
 claude-haiku-4-5,suntu,Montón. Conjunto de cosas puestas desordenadamente unas sobre otras,Órgano vital ubicado en la cavidad torácica que impulsa la circulación de la sangre en los seres vivos.,0.375,0.02,False
-claude-haiku-4-5,kallki rumi,Piedra para empedrar,Piedra que sobresale o afloramiento rocoso en la superficie del terreno.,0.462,0.529,False
+claude-haiku-4-5,kallki rumi,Piedra para empedrar,Piedra que sobresale o afloramiento rocoso en la superficie del terreno.,0.462,0.529,True
 claude-haiku-4-5,p'ukchiy,"Pleamar, plenamar. Fin de la creciente del mar","Hinchar o inflar algo, especialmente las mejillas o el cuerpo.",0.438,0.156,False
 claude-haiku-4-5,uyni,Acuerdo. Resolución tomada por varias personas,Especie de planta herbácea con flores amarillas que crece en las regiones andinas.,0.362,0.049,False
 claude-haiku-4-5,qunta,"Magnesia. Óxido de magnesio de color blanco, suave e insípido, usado en medicina","Parte posterior o trasera de algo, especialmente la cola de un animal.",0.434,-0.019,False
@@ -303,7 +303,7 @@ claude-haiku-4-5,jamk'a k'analla,Olla especial para tostar maíz u otros cereale
 claude-haiku-4-5,ch'asaka,"Enmarañado, enredado, despeinado",Terreno o ladera de montaña con pendiente pronunciada y difícil de transitar.,0.343,0.08,False
 claude-haiku-4-5,maku,Guanaco macho,Recipiente de barro o metal usado para cocinar o almacenar alimentos.,0.253,-0.045,False
 claude-haiku-4-5,yaqulla,Manto con que las mujeres se cubren los hombros y la espalda,Bebida alcohólica tradicional andina hecha de maíz fermentado.,0.331,-0.037,False
-claude-haiku-4-5,kallpayuq,"Fuerte, vigoroso","Persona que tiene fuerza, vigor o capacidad para realizar algo.",0.308,0.565,False
+claude-haiku-4-5,kallpayuq,"Fuerte, vigoroso","Persona que tiene fuerza, vigor o capacidad para realizar algo.",0.308,0.565,True
 claude-haiku-4-5,rakhu qhaparina,Sonido bajo o grueso,Acción de saltar o brincar hacia atrás.,0.31,0.044,False
 claude-haiku-4-5,ch'aki pacha,Sequía. Tiempo seco de larga duración,Período de sequía o estación seca del año.,0.564,0.665,True
 claude-haiku-4-5,muruy,Descabezar. Quitar la cabeza,Acto de girar o dar vueltas alrededor de algo.,0.4,0.112,False
@@ -317,10 +317,10 @@ claude-haiku-4-5,p'itita,Alcoba. Aposento para dormir,Planta herbácea de hojas 
 claude-haiku-4-5,janllariy,Bostezar. Inspirar abriendo la boca,Actitud de negarse o rechazar algo de manera obstinada.,0.372,0.205,False
 claude-haiku-4-5,kamay,"Crear. Inventar, producir de la nada","Oficio, profesión o trabajo que se ejerce habitualmente.",0.352,0.12,False
 claude-haiku-4-5,jaypay,Adquirir. Conseguir u obtener una cosa,Llevarse algo secretamente o sin permiso de su dueño.,0.378,0.286,False
-claude-haiku-4-5,jarawi,Canto romántico y sentimental,"Composición poética lírica de carácter triste o melancólico que expresa sentimientos de amor, dolor o nostalgia.",0.326,0.615,False
+claude-haiku-4-5,jarawi,Canto romántico y sentimental,"Composición poética lírica de carácter triste o melancólico que expresa sentimientos de amor, dolor o nostalgia.",0.326,0.615,True
 claude-haiku-4-5,khapa,Paso. Espacio entre el pie adelantado y el que queda atrás,"Abundante, numeroso o en gran cantidad.",0.387,0.152,False
 claude-haiku-4-5,pichqa,Cinco,Número cinco en la numeración quechua.,1.0,0.444,False
-claude-haiku-4-5,puquy,Maduración. Acción de madurar,Madurez o sazón de frutas y otros productos agrícolas.,0.366,0.548,False
+claude-haiku-4-5,puquy,Maduración. Acción de madurar,Madurez o sazón de frutas y otros productos agrícolas.,0.366,0.548,True
 claude-haiku-4-5,machay,Farrear. Hacer farra,Cueva o caverna natural en las montañas.,0.339,0.083,False
 claude-haiku-4-5,q'inaqay,Descorazonar. Causar desengaño,Acción de mirar con atención o vigilancia hacia algo o alguien.,0.311,0.215,False
 claude-haiku-4-5,lliwkyay,"Aclarar, limpiarse de nubes el cielo",Deslizarse o resbalar sobre una superficie lisa.,0.386,0.315,False
@@ -329,10 +329,10 @@ claude-haiku-4-5,yaqch'iy,Lavar las manos o dedos después de tocar algo,Arranca
 claude-haiku-4-5,wichariq,Ascendiente,Persona que corre o que es veloz en sus movimientos.,0.276,0.022,False
 claude-haiku-4-5,ninachiy,"Prender fuego, hacer prender fuego",Hacer que alguien mienta o engañe a otro.,0.455,0.079,False
 claude-haiku-4-5,chiqa,"Verdadero, -ra. Conforme a la verdad o a la realidad","Especie de ave andina de plumaje oscuro, similar a una paloma.",0.324,0.085,False
-claude-haiku-4-5,inti chillay,"Estrella lucero. inti chinkay. Kunti. s. Oeste. Occidente, poniente. inti lluqsiy. Anti. s. Oriente. Punto cardinal del horizonte, por donde sale el sol","Fenómeno astronómico en el que la luna se interpone entre el sol y la tierra, oscureciendo total o parcialmente la luz solar.",0.479,0.515,False
+claude-haiku-4-5,inti chillay,"Estrella lucero. inti chinkay. Kunti. s. Oeste. Occidente, poniente. inti lluqsiy. Anti. s. Oriente. Punto cardinal del horizonte, por donde sale el sol","Fenómeno astronómico en el que la luna se interpone entre el sol y la tierra, oscureciendo total o parcialmente la luz solar.",0.479,0.515,True
 claude-haiku-4-5,pisichay,"Acortar. Disminuir la longitud, duración, etc. de alguna cosa","Hacer pequeño, reducir de tamaño o empequeñecer algo.",0.372,0.405,False
 claude-haiku-4-5,charasaqa,Triángulo,"Planta herbácea andina de la familia de las solanáceas, con frutos pequeños y comestibles.",0.126,0.102,False
-claude-haiku-4-5,akllapay,"Seleccionar, escoger",Escoger o seleccionar algo de entre varias opciones disponibles.,0.519,0.601,False
+claude-haiku-4-5,akllapay,"Seleccionar, escoger",Escoger o seleccionar algo de entre varias opciones disponibles.,0.519,0.601,True
 claude-haiku-4-5,qhunay,Moler con el mortero rústico hasta reducir a harina,Acción de hacer fuerza o esfuerzo con el cuerpo.,0.469,0.13,False
 claude-haiku-4-5,kallchay,Formar gavillas erguidas,Acción de raspar o limpiar la superficie de algo con un instrumento áspero.,0.274,0.05,False
 claude-haiku-4-5,ñut'u jallp'a,Polvo. Tierra que levanta el aire,Tierra negra o suelo oscuro y fértil.,0.522,0.452,False
@@ -348,7 +348,7 @@ claude-haiku-4-5,kuru kuru,Regalar cosas menudas arrojándolas al público,"Inse
 claude-haiku-4-5,t'ikachay,Adornar con banderines o flores,Hacer que algo florezca o brote flores.,0.522,0.479,False
 claude-haiku-4-5,jusk'una,"Lezna, instrumento que usan los zapateros y talabarteros para agujerear",Acción de hacer entrar o introducir algo por la fuerza en un lugar estrecho.,0.425,0.145,False
 claude-haiku-4-5,chapapa,Choza pequeña construida con las ramas del árbol (JL),Pájaro acuático pequeño de plumaje oscuro que habita en lagos y ríos de los Andes.,0.412,0.01,False
-claude-haiku-4-5,qatiykachay,Perseguir. Seguir al que huye por todas partes,Acción de perseguir o seguir constantemente a alguien.,0.505,0.606,False
+claude-haiku-4-5,qatiykachay,Perseguir. Seguir al que huye por todas partes,Acción de perseguir o seguir constantemente a alguien.,0.505,0.606,True
 claude-haiku-4-5,ruqya,Ruido. Sonido inarticulado y confuso,Planta herbácea de los Andes con hojas comestibles y flores amarillas.,0.305,0.018,False
 claude-haiku-4-5,chaninchay,"Premiar. Remunerar, dar premio",Acto de examinar o inspeccionar algo cuidadosamente para verificar su estado o calidad.,0.351,0.142,False
 claude-haiku-4-5,rimapuy,Interceder. Mediar en favor de alguien,Imperativo de segunda persona singular del verbo hablar o conversar.,0.4,0.33,False
@@ -368,7 +368,7 @@ claude-haiku-4-5,tinya,Tamboril,Instrumento de percusión de forma circular usad
 claude-haiku-4-5,muyurina,"Recodo, vuelta",Girar o dar vueltas alrededor de algo.,0.471,0.394,False
 claude-haiku-4-5,khiskilli,Cosquillas,"Planta herbácea de los Andes con flores amarillas, utilizada tradicionalmente en medicina.",0.141,0.133,False
 claude-haiku-4-5,jarwi,Cualquier grano o cereal ligeramente tostado,Fruta pequeña y redonda que crece en racimos en ciertos árboles andinos.,0.411,0.199,False
-claude-haiku-4-5,simi,Boca. Cavidad por donde se toma el alimento,Boca o lengua de una persona o animal.,0.487,0.572,False
+claude-haiku-4-5,simi,Boca. Cavidad por donde se toma el alimento,Boca o lengua de una persona o animal.,0.487,0.572,True
 claude-haiku-4-5,chamapayay,"Regocijo o satisfacción hiriente, contento maligno del mal ajeno","Extender o tenderse sobre algo, cubriendo su superficie.",0.42,0.032,False
 claude-haiku-4-5,wañuy p'itiy,Agonizar. Estar en la agonía,Acto de morir o fallecimiento repentino de una persona.,0.38,0.322,False
 claude-haiku-4-5,maqllu,Riesgo. Proximidad de un daño. maqllu. Ch'iki. s. Peligro. Riesgo inminente,Instrumento agrícola con forma de azada utilizado para cavar y remover la tierra.,0.387,0.167,False
@@ -376,12 +376,12 @@ claude-haiku-4-5,llawiy,Blandir. Mover un arma u otra cosa con movimiento vibrat
 claude-haiku-4-5,wach'uy,Adulterar. Cometer adulterio,Limpiar o desyerbar un terreno de cultivo.,0.435,0.028,False
 claude-haiku-4-5,rak'isqa,Cociente. Divididor,Aquello que ha sido rasgado o desgarrado.,0.271,0.057,False
 claude-haiku-4-5,qapachay,"Divertir. Entretener, recrear",Tejido grueso de lana utilizado como prenda de abrigo o manta.,0.276,0.097,False
-claude-haiku-4-5,mayu qaylla,Orilla del río,Terreno bajo y húmedo junto a un río o arroyo.,0.353,0.546,False
+claude-haiku-4-5,mayu qaylla,Orilla del río,Terreno bajo y húmedo junto a un río o arroyo.,0.353,0.546,True
 claude-haiku-4-5,maq'as,Cierto cantarillo de cuello muy angosto,"Golpe o golpiza que se da a alguien, especialmente con la mano abierta o un objeto.",0.37,-0.016,False
 claude-haiku-4-5,asina,Chiste. Dicho agudo y gracioso,"De esa manera, así, de ese modo.",0.345,0.095,False
 claude-haiku-4-5,llamkha,Tacto. Sentido con que percibimos las cosas al tocarlas,Trabajo o labor que se realiza con esfuerzo físico.,0.476,0.21,False
 claude-haiku-4-5,susunkachiy,Adormecer. Hacer entorpecer o causar sueño,Hacer que alguien tenga miedo o temor.,0.481,0.443,False
-claude-haiku-4-5,qhaway,Cuidar observando con la vista,Acción de mirar o ver algo con atención.,0.464,0.59,False
+claude-haiku-4-5,qhaway,Cuidar observando con la vista,Acción de mirar o ver algo con atención.,0.464,0.59,True
 claude-haiku-4-5,pukpuka,Codorniz. Ave gallinácea semejante a la perdiz,Enfermedad de la piel caracterizada por erupciones o llagas que producen picazón y supuración.,0.36,0.06,False
 claude-haiku-4-5,ch'akyay,"Despejarse. Hacerse claro, diáfano. Adquirir pureza y diafanidad muy grande",Tropezar o perder el equilibrio al caminar.,0.376,0.036,False
 claude-haiku-4-5,pullqay,"Esquivar. Evitar, rehuir",Acción de hincharse o inflamarse una parte del cuerpo.,0.312,0.189,False
@@ -430,7 +430,7 @@ claude-haiku-4-5,k'illiy,"Ribetear, poner ribetes",Enfermedad caracterizada por 
 claude-haiku-4-5,p'ulltikuy,Sumergirse,Jugar o divertirse de manera alegre y despreocupada.,0.262,0.187,False
 claude-haiku-4-5,tapkay,Detener sorprendiendo en flagrante,Pisar o pisotear algo con los pies.,0.324,0.051,False
 claude-haiku-4-5,achallqu,Cabello o pelo que se encuentra en la mazorca de maíz,"Animal doméstico de cuatro patas, parecido al perro, que ladraba y se utilizaba para la caza y la ganadería en tiempos prehispánicos.",0.441,0.151,False
-claude-haiku-4-5,qallu ñawpa,Región predorsal de la lengua,Parte anterior o delantera de la lengua.,0.588,0.508,False
+claude-haiku-4-5,qallu ñawpa,Región predorsal de la lengua,Parte anterior o delantera de la lengua.,0.588,0.508,True
 claude-haiku-4-5,phaskiy,Orearse,Acción y efecto de romper o quebrar algo en pedazos.,0.172,0.132,False
 claude-haiku-4-5,ma!,"¡A ver!, ¡pues!, ¡veamos! Ma yuparipuway: Pues cuéntamelo. Ma kay aqhata llamiriy: Prueba pues esta chicha. ma. Apócope de Mana",Partícula interrogativa que expresa duda o incertidumbre sobre algo.,0.335,0.082,False
 claude-haiku-4-5,t'ikayuq,"Florido, -da. Que tiene flores",Que tiene flores o está florecido.,0.794,0.76,True
@@ -474,14 +474,14 @@ claude-haiku-4-5,wallqanqa,"Rodela, adarga. wallqarikuy. r. y prnl. Ponerse coll
 claude-haiku-4-5,chinkay,"Perderse, extraviarse","Desaparecer, perderse o extraviarse.",0.714,0.78,True
 claude-haiku-4-5,nanaq,Muy,Que causa dolor o que duele.,0.077,0.179,False
 claude-haiku-4-5,juch'uychana,Reducción,Acción de hacer pequeño o reducir el tamaño de algo.,0.211,0.187,False
-claude-haiku-4-5,uyarikuy,Escucha. Acción de escuchar,Escuchar atentamente o prestar oído a algo.,0.493,0.601,False
-claude-haiku-4-5,kamachiy,"Decretar. Dictar decretos, ordenar","Acción de mandar, ordenar o disponer algo a alguien.",0.424,0.519,False
+claude-haiku-4-5,uyarikuy,Escucha. Acción de escuchar,Escuchar atentamente o prestar oído a algo.,0.493,0.601,True
+claude-haiku-4-5,kamachiy,"Decretar. Dictar decretos, ordenar","Acción de mandar, ordenar o disponer algo a alguien.",0.424,0.519,True
 claude-haiku-4-5,wallu,"Desorejado, -da. Que tiene la oreja amputada",Planta herbácea de hojas comestibles cultivada en los Andes.,0.408,0.124,False
 claude-haiku-4-5,qurikuq,"Dadivoso, -sa. Generoso",Persona que tiene oro o que trabaja con oro.,0.31,0.105,False
 claude-haiku-4-5,uma,"Cumbre. Cima, cúspide, pináculo",Cabeza o parte superior del cuerpo de los animales y personas.,0.37,0.161,False
 claude-haiku-4-5,yapu,Acto y efecto de arar (Cusco),Terreno o parcela de tierra dedicada al cultivo agrícola.,0.447,0.499,False
 claude-haiku-4-5,t'ampayay,Desgreñarse. Desordenarse los cabellos,Golpear o azotar repetidamente con un objeto.,0.39,0.043,False
-claude-haiku-4-5,unquy,Enfermedad,Enfermedad o padecimiento que afecta la salud del cuerpo.,1.0,0.537,False
+claude-haiku-4-5,unquy,Enfermedad,Enfermedad o padecimiento que afecta la salud del cuerpo.,1.0,0.537,True
 claude-haiku-4-5,khiskay,"Espinar, punzar, herir con espina",Planta herbácea de hojas espinosas que crece en zonas andinas.,0.426,0.201,False
 claude-haiku-4-5,waq'a,"Atolondrado, poco juicioso",Llanto o acto de llorar con sollozos y lamentos.,0.384,0.103,False
 claude-haiku-4-5,urina,Venado selvático,Dirección hacia arriba o parte superior de algo.,0.222,0.084,False
@@ -504,7 +504,7 @@ claude-haiku-4-5,kutana,"Mortero. Utensilio para moler, moledora",Instrumento de
 claude-haiku-4-5,millaychay,Afear. Hacer o poner fea a una persona o cosa,Saludar o hacer reverencia como muestra de respeto.,0.516,0.246,False
 claude-haiku-4-5,siminchay,Insinuar. Dar a entender una cosa indicándola ligeramente,Acción de hablar o conversar entre dos o más personas.,0.426,0.277,False
 claude-haiku-4-5,khachayay,Endurecerse la mugre,Partir o romper algo en pedazos pequeños.,0.333,0.138,False
-claude-haiku-4-5,mallki,"Planta. Ser orgánico que nace, crece, se reproduce y muere, pero que no es capaz de desplazarse de un lado a otro",Árbol o planta leñosa de tallo grueso y ramificado.,0.372,0.538,False
+claude-haiku-4-5,mallki,"Planta. Ser orgánico que nace, crece, se reproduce y muere, pero que no es capaz de desplazarse de un lado a otro",Árbol o planta leñosa de tallo grueso y ramificado.,0.372,0.538,True
 claude-haiku-4-5,chharpuchay,Oscurecer y hacer sombra,Acción de salpicar o esparcir líquido en pequeñas gotitas.,0.321,0.128,False
 claude-haiku-4-5,tukuynin,"Global. tulumpi. Ninri quri. s. Zarcillo. Pendiente, arete",Finalización o conclusión de algo.,0.418,0.1,False
 claude-haiku-4-5,taripuy,Hallar lo que mucho se buscó. Taripuy,Buscar o procurar encontrar algo o a alguien.,0.38,0.394,False
@@ -517,7 +517,7 @@ claude-haiku-4-5,tuytuy,Nadar. Mantenerse sobre un líquido e ir por él sin toc
 claude-haiku-4-5,sirpay,Traicionar. Hacer traición,Acción de deslizarse o resbalar sobre una superficie lisa.,0.361,0.166,False
 claude-haiku-4-5,aqalli,Intestino,Aqalli: Planta herbácea andina de hojas comestibles utilizada en la cocina tradicional quechua.,0.155,0.122,False
 claude-haiku-4-5,sikñiy,Dejar caer una partecita de un haz de paja (JL),Acción de dejar caer algo desde una altura o soltar algo que se tenía en las manos.,0.557,0.24,False
-claude-haiku-4-5,warmi,Mujer. Persona de sexo femenino,Mujer adulta o esposa.,0.462,0.517,False
+claude-haiku-4-5,warmi,Mujer. Persona de sexo femenino,Mujer adulta o esposa.,0.462,0.517,True
 claude-haiku-4-5,alli,"Bueno, sano","Bueno, favorable o conveniente.",0.706,0.275,False
 claude-haiku-4-5,rantiy,Reemplazar. Poner en lugar de otro,Acción de comprar o adquirir algo mediante intercambio o pago de dinero.,0.42,0.2,False
 claude-haiku-4-5,p'isqu chaki,Zanca. Pata de las aves,Persona que tiene los pies deformes o torcidos.,0.319,0.255,False
@@ -550,11 +550,11 @@ claude-haiku-4-5,mach'aqwa,Culebra. Serpiente,Bebida alcohólica tradicional ela
 claude-haiku-4-5,utiqa,"Estupefacción, pasmo o estupor","Planta herbácea de la región andina con flores amarillas, utilizada tradicionalmente en medicina.",0.222,0.045,False
 claude-haiku-4-5,qhatu,Abasto. Provisión de cosas y víveres,Mercado o lugar donde se compra y vende.,0.427,0.29,False
 claude-haiku-4-5,q'ampay,Encarrujar. Arrollar. q'apachi (JAL). s. Incienso,Ablandar o suavizar algo mediante presión o golpes repetidos.,0.318,-0.012,False
-claude-haiku-4-5,pukayachiy,Enrojecer. Poner rojo,Hacer que algo se ponga rojo o encenderse en color rojo.,0.479,0.504,False
+claude-haiku-4-5,pukayachiy,Enrojecer. Poner rojo,Hacer que algo se ponga rojo o encenderse en color rojo.,0.479,0.504,True
 claude-haiku-4-5,thaniy,"Sanar, recobrar, ir remediándose poco a poco",Acto de dejar o abandonar algo en un lugar.,0.37,0.15,False
 claude-haiku-4-5,nuna,Espíritu,Sustancia blanda y esponjosa que se forma en el interior de los huesos.,0.179,0.105,False
 claude-haiku-4-5,maqanakuy,"Batallar. Pelear, combatir",Acción de golpearse mutuamente dos o más personas.,0.32,0.223,False
-claude-haiku-4-5,wañuq,Mortal. Sujeto a morir,Persona o animal que está muriendo o a punto de morir.,0.483,0.526,False
+claude-haiku-4-5,wañuq,Mortal. Sujeto a morir,Persona o animal que está muriendo o a punto de morir.,0.483,0.526,True
 claude-haiku-4-5,apuykachay,Dominar. Ejercer dominio,Forma de tratamiento respetuoso hacia una persona de autoridad o dignidad.,0.298,0.257,False
 claude-haiku-4-5,chiqniy,Aborrecimiento,"Acción de agarrar, coger o asir algo con la mano.",0.258,0.126,False
 claude-haiku-4-5,ramkama,"Luqt'u. adj. y s. Zonzo, -za. Tonto, necio, ignorante",Acción de barrer o limpiar el suelo con una escoba.,0.369,0.14,False
@@ -573,10 +573,10 @@ claude-haiku-4-5,jayaqiy,"Picar, amargar como la hiel",Acto de entrar o penetrar
 claude-haiku-4-5,manchachiy,"Espantar. Causar espanto, dar susto",Causar miedo o temor a alguien.,0.523,0.667,True
 claude-haiku-4-5,wama jamut'ay,"Invención, descubrimiento",Acción de vomitar o expulsar el contenido del estómago por la boca.,0.22,0.032,False
 claude-haiku-4-5,ñat'iy,"Sentir náuseas. ñat'usqa, q'apñusqa, t'añusqa. p.p. Abollado, aplastado",Hacer un agujero o perforación en algo.,0.312,0.168,False
-claude-haiku-4-5,sama,"Descanso. Reposo, quietud",Descanso o reposo del cuerpo.,0.604,0.61,False
+claude-haiku-4-5,sama,"Descanso. Reposo, quietud",Descanso o reposo del cuerpo.,0.604,0.61,True
 claude-haiku-4-5,k'anchilla,Mujer inclinada al lujo y a la elegancia,Lámpara o luz pequeña hecha de grasa y mecha.,0.452,0.011,False
 claude-haiku-4-5,k'achalliy,"Engalanar. Adornar, embellecer",Acción de romper o quebrar algo en pedazos pequeños.,0.296,0.08,False
-claude-haiku-4-5,qillqay,Escribir. Representar por letras las ideas,Acto de escribir o trazar signos gráficos sobre una superficie.,0.462,0.528,False
+claude-haiku-4-5,qillqay,Escribir. Representar por letras las ideas,Acto de escribir o trazar signos gráficos sobre una superficie.,0.462,0.528,True
 claude-haiku-4-5,atatay!,¡Qué dolor!,"Exclamación de asombro, sorpresa o admiración.",0.185,0.195,False
 claude-haiku-4-5,qiquy,Embaucar. Engañar con fines de fraude,Acción de roer o raspar algo con los dientes.,0.494,0.084,False
 claude-haiku-4-5,saruy,Pisar. Sentar el pie,Acción de fluir o correr el agua de forma continua.,0.328,0.233,False
@@ -621,31 +621,31 @@ claude-haiku-4-5,awasqa,"Tejido, tela tejida en el telar",Tela tejida o prenda d
 claude-haiku-4-5,wiqru,"Torcido, combado",Tuerto o que tiene un solo ojo funcional.,0.286,-0.018,False
 claude-haiku-4-5,qhasay,Helar. Congelar,Medida de longitud equivalente a la distancia que va desde el codo hasta la punta de los dedos extendidos.,0.175,0.078,False
 claude-haiku-4-5,k'uyka,Lombriz de tierra,Curva o vuelta que forma un camino o río.,0.255,0.253,False
-claude-haiku-4-5,wayruru,"Búcare, árbol leguminoso de lugares tropicales, cuyos frutos rojos encendidos y algunas veces mellados de negro, se utiliza para collares y otros usos de adorno (JAL)","Planta leguminosa de grano pequeño, rojo y negro, usado tradicionalmente como amuleto de protección en los Andes.",0.509,0.528,False
+claude-haiku-4-5,wayruru,"Búcare, árbol leguminoso de lugares tropicales, cuyos frutos rojos encendidos y algunas veces mellados de negro, se utiliza para collares y otros usos de adorno (JAL)","Planta leguminosa de grano pequeño, rojo y negro, usado tradicionalmente como amuleto de protección en los Andes.",0.509,0.528,True
 claude-haiku-4-5,mach'ina,Cubo,Máquina o aparato mecánico para realizar un trabajo determinado.,0.119,0.08,False
 claude-haiku-4-5,rawmay,"Chapodar. Cortar ramas de los árboles, a fin de que no se envicien. Rawra, lawra, nina rawra. s. Llama de fuego",Acción de rasgarse o romperse la ropa o tela.,0.381,0.306,False
 claude-haiku-4-5,ñawrayay,"Diversificarse. Policromarse, ponerse polícromo, variar o diferenciarse cosas de un conjunto",Mirar fijamente o con atención a alguien o algo.,0.336,0.239,False
 claude-haiku-4-5,q'awchi,"Agudo. Delgado, afilado","Insecto de cuerpo alargado que vive en lugares oscuros y húmedos, comúnmente conocido como silverfish o pececillo de plata.",0.211,0.236,False
 claude-haiku-4-5,punki manay,Hincharse excesivamente,Acción de golpear o empujar algo con la rodilla.,0.257,0.477,False
-claude-haiku-4-5,pisi sunqu,Pusilámine. Falto de ánimo o valor,"Persona de poco ánimo o coraje, pusilánime o cobarde.",0.524,0.556,False
+claude-haiku-4-5,pisi sunqu,Pusilámine. Falto de ánimo o valor,"Persona de poco ánimo o coraje, pusilánime o cobarde.",0.524,0.556,True
 claude-haiku-4-5,amu amu,"Callado, reservado","Planta herbácea de los Andes con flores amarillas, utilizada tradicionalmente en medicina.",0.28,-0.037,False
 claude-haiku-4-5,llakipakuy,Desesperación. Desespero,Afligirse o entristecerse por algo o alguien.,0.364,0.262,False
 claude-haiku-4-5,ch'usu,"Deshinchado, -da. Dícese de los granos agostados antes de madurar","Recipiente de barro o cerámica, generalmente de forma redonda, usado para almacenar líquidos o alimentos.",0.385,0.065,False
-claude-haiku-4-5,munay,"Voluntad. Amor, afición, benevolencia o afecto","Deseo, voluntad o gana de hacer algo.",0.488,0.528,False
+claude-haiku-4-5,munay,"Voluntad. Amor, afición, benevolencia o afecto","Deseo, voluntad o gana de hacer algo.",0.488,0.528,True
 claude-haiku-4-5,munana,"Afecto, cariño",Desear o querer algo.,0.353,0.242,False
 claude-haiku-4-5,warita,Canción que es interpretada por la hinchada o barra,Palo o vara delgada de madera.,0.375,0.054,False
 claude-haiku-4-5,willay,"Narrar. Relatar, referir, contar",Noticia o información que se comunica a alguien.,0.304,0.316,False
 claude-haiku-4-5,uqllay,Abrazo,Planta herbácea de flores amarillas cuyas hojas se utilizan en medicina tradicional andina.,0.104,0.031,False
 claude-haiku-4-5,aparikapuy,Llevarse algo ajeno,Verbo reflexivo que significa permitirse a uno mismo o darse permiso para hacer algo.,0.348,0.277,False
-claude-haiku-4-5,iñaka ñust'a,Mujer descediente de un monarca (JL),Mujer joven soltera de la nobleza inca.,0.486,0.568,False
-claude-haiku-4-5,p'acha,Vestido. Ropa que cubre el cuerpo de la mujer y el hombre,Tela o vestido de tejido de lana o algodón.,0.462,0.551,False
+claude-haiku-4-5,iñaka ñust'a,Mujer descediente de un monarca (JL),Mujer joven soltera de la nobleza inca.,0.486,0.568,True
+claude-haiku-4-5,p'acha,Vestido. Ropa que cubre el cuerpo de la mujer y el hombre,Tela o vestido de tejido de lana o algodón.,0.462,0.551,True
 claude-haiku-4-5,maqachikuy,"Dejarse golpear, hacerse golpear. maqana. Arma contundente ofensiva, porra, garrote. Macana (<Q)",Acción de peinarse o arreglarse el cabello con un peine.,0.358,0.087,False
 claude-haiku-4-5,tama,Rebaño. Hato grande de ganado,Recipiente de barro o cerámica utilizado para almacenar alimentos o líquidos.,0.35,0.045,False
 claude-haiku-4-5,murq'u,"Esfera. Bola, sólido redondo",Nudo o enlace apretado hecho con cuerda o cordel.,0.378,0.109,False
 claude-haiku-4-5,qaracha,"Sarna, enfermedad del ganado lanar",Enfermedad de la piel caracterizada por la aparición de llagas o úlceras.,0.48,0.128,False
 claude-haiku-4-5,samariy,Respirar. Absorber y exhalar el aire,Descansar o reposar después de un trabajo o esfuerzo.,0.372,0.248,False
 claude-haiku-4-5,waqra runa,"Misántropo, huraño, solitario",Persona que trabaja en la ganadería o cría de animales domesticados.,0.292,0.079,False
-claude-haiku-4-5,q'ipiy,Llevar el bulto o cargo sobre las espaldas una persona,Acción de llevar algo a la espalda o cargarlo en la espalda.,0.588,0.623,False
+claude-haiku-4-5,q'ipiy,Llevar el bulto o cargo sobre las espaldas una persona,Acción de llevar algo a la espalda o cargarlo en la espalda.,0.588,0.623,True
 claude-haiku-4-5,thupray,Afilar. Sacar filo o punta,Medir o pesar algo usando una balanza o instrumento de medición.,0.368,0.027,False
 claude-haiku-4-5,qhipachiy,Postergar. Dejar para más adelante o después,Dejar algo o a alguien atrás o rezagado.,0.494,0.376,False
 claude-haiku-4-5,rapra,Ala. Miembro para volar,Tela o paño de tejido grueso y resistente.,0.344,-0.049,False
@@ -664,7 +664,7 @@ claude-haiku-4-5,mana pi,"Nadie, ninguno. mana pipas, ni pi (ni <C). pron. Nadie
 claude-haiku-4-5,wayka,Agresión colectiva a una sola persona,Cuerda o soga gruesa hecha de fibras vegetales o animal.,0.422,0.126,False
 claude-haiku-4-5,pisichay,Despreciar. Tener en poco,Acción de apachurrar o aplastar algo con los dedos o las manos.,0.259,0.274,False
 claude-haiku-4-5,purwa,Soga trenzada de ramales muy gruesos de lana de llama,"Montón o rimero de cosas apiladas, especialmente de maíz u otros productos agrícolas.",0.391,0.166,False
-claude-haiku-4-5,jampi,"Medicamento, sustancia medicinal",Medicina o remedio para curar enfermedades.,0.459,0.597,False
+claude-haiku-4-5,jampi,"Medicamento, sustancia medicinal",Medicina o remedio para curar enfermedades.,0.459,0.597,True
 claude-haiku-4-5,llamp'u,"Benigno, suave, apacible",Sustancia pegajosa o viscosa que se adhiere a las superficies.,0.306,0.212,False
 claude-haiku-4-5,p'anqa,"Libro. Obra de determinada extensión, cuyo contenido es científico o literario",Tablilla de madera delgada o plancha plana usada para diversos fines.,0.37,0.185,False
 claude-haiku-4-5,mayt'uy,"Envolver, liar, hacer un manojo",Acción de girar o rotar algo alrededor de un eje.,0.447,0.125,False
@@ -674,7 +674,7 @@ claude-haiku-4-5,p'usquy,"Fermentar. Sufrir fermentación las materias como la l
 claude-haiku-4-5,antay raphi,Hoja seca propio en la estación de otoño,Rastro o huella dejada por alguien o algo al pasar.,0.455,0.142,False
 claude-haiku-4-5,juq'uchay,"Poner a remojar, humedecer en exceso",Hacer que algo se vuelva pequeño o reducir su tamaño.,0.432,0.06,False
 claude-haiku-4-5,pinas,"Prisionero, -ra. Cautivo",Tejido de fibra vegetal elaborado con las hojas de la piña.,0.278,-0.011,False
-claude-haiku-4-5,chay pacha,Entonces. En aquel tiempo u ocasión,"Ese tiempo, esa época o aquel momento.",0.611,0.61,False
+claude-haiku-4-5,chay pacha,Entonces. En aquel tiempo u ocasión,"Ese tiempo, esa época o aquel momento.",0.611,0.61,True
 claude-haiku-4-5,chukchuyuq,Enfermo de malaria,Persona que tiene cabello largo o abundante.,0.328,-0.059,False
 claude-haiku-4-5,phurunchay,Emplumar. Poner plumas a algo,Enfermedad de la piel caracterizada por la aparición de granos o pústulas.,0.312,0.253,False
 claude-haiku-4-5,willay,Cuento. Relato,Acción de informar o contar algo a alguien.,0.321,0.369,False
@@ -695,10 +695,10 @@ claude-haiku-4-5,suyana,Esperanza,Acción de esperar o aguardar a alguien o algo
 claude-haiku-4-5,willkaparu,Una variedad de maíz de grano muy oscuro,Piedra sagrada o piedra de culto venerada por los antiguos pueblos andinos.,0.442,0.067,False
 claude-haiku-4-5,ch'atay,Acusar. Denunciar,Romper o partir algo en pedazos pequeños.,0.281,0.159,False
 claude-haiku-4-5,chiwchi,"Polluelo. Pollito, cría de las aves",Planta herbácea de hojas aromáticas usado en la medicina tradicional andina.,0.364,-0.079,False
-claude-haiku-4-5,kutipuy,Retornar. Volver al lugar o a la situación anterior,Volver o regresar a un lugar.,0.727,0.629,False
+claude-haiku-4-5,kutipuy,Retornar. Volver al lugar o a la situación anterior,Volver o regresar a un lugar.,0.727,0.629,True
 claude-haiku-4-5,kusi,"Ventura. Felicidad, dicha","Alegría, contento o satisfacción.",0.316,0.444,False
 claude-haiku-4-5,ch'uspi,Mosca. Insecto común alado,"Recipiente de barro o metal con forma de olla pequeña, utilizado para cocinar o servir alimentos.",0.291,0.086,False
-claude-haiku-4-5,muyuy,Girar. Moverse circularmente,Dar vueltas alrededor de algo o moverse en círculo.,0.487,0.642,False
+claude-haiku-4-5,muyuy,Girar. Moverse circularmente,Dar vueltas alrededor de algo o moverse en círculo.,0.487,0.642,True
 claude-haiku-4-5,jinch'ay,"Dar de reveses, abofetear con la parte opuesta de palma de la mano",Hincharse o aumentar de volumen algo.,0.43,0.334,False
 claude-haiku-4-5,tunkinaya,Enigma,Acción de hundirse o sumergirse algo en agua o líquido.,0.138,0.004,False
 claude-haiku-4-5,maway,Aplícase al fruto temprano o precoz,Cuerda o soga hecha de fibra vegetal o animal.,0.462,0.06,False
@@ -739,7 +739,7 @@ claude-haiku-4-5,kirparay,Destapar. Quitar la tapa,Acción de girar o rodar algo
 claude-haiku-4-5,chusmi,Maduro,Mujer joven o doncella.,0.286,0.234,False
 claude-haiku-4-5,k'allma,Rama. Parte vegetal que sale del tronco o tallo principal de la planta,Órgano respiratorio de los animales ubicado en el tórax.,0.416,0.151,False
 claude-haiku-4-5,qasichiy,"Desocupar. Dejar vacío o libre, abandonar un sitio, sacar las cosas que lo ocupan",Hacer que algo o alguien tenga vergüenza o avergonzar.,0.394,0.187,False
-claude-haiku-4-5,phichu,"Mechón de lana, mata de pelo enredada",Cabello o pelo del cuerpo humano.,0.455,0.522,False
+claude-haiku-4-5,phichu,"Mechón de lana, mata de pelo enredada",Cabello o pelo del cuerpo humano.,0.455,0.522,True
 claude-haiku-4-5,t'utura,"Totora. (<Q). Especie de anea o espadaña empleada por los campesinos para construir balsas, barcas y como techumbre de sus viviendas","Recipiente de barro o metal en forma de olla con asas, utilizado para cocinar o almacenar alimentos.",0.466,0.271,False
 claude-haiku-4-5,junt'aykuy,Llenar. Ocupar enteramente un lugar vacío,Juntar o reunir cosas en un solo lugar.,0.557,0.37,False
 claude-haiku-4-5,wanqhay,"Despeñar, arrojar a una persona o cosa desde un lugar alto",Acción de cargar o llevar algo pesado sobre los hombros o la espalda.,0.5,0.39,False
@@ -764,7 +764,7 @@ claude-haiku-4-5,t'ukuchiq,Admirable. Digno de admiración,Persona que cierra o 
 claude-haiku-4-5,imayna qhaparina,Modo de articulación,Manera de comportarse o conducirse alguien en la vida.,0.411,0.153,False
 claude-haiku-4-5,wañuchiq,"Que mata, matador",Persona o cosa que causa la muerte o que mata.,0.464,0.421,False
 claude-haiku-4-5,q'uymi,Sahumerio,Planta herbácea de los Andes con hojas comestibles y flores amarillas.,0.154,0.126,False
-claude-haiku-4-5,tata inti,Dios Sol,"El sol, considerado como padre o deidad suprema en la cosmovisión andina.",0.2,0.574,False
+claude-haiku-4-5,tata inti,Dios Sol,"El sol, considerado como padre o deidad suprema en la cosmovisión andina.",0.2,0.574,True
 claude-haiku-4-5,qhulluqichiy,Mover un líquido,Hacer que algo se doble o se encorve hacia abajo.,0.328,0.188,False
 claude-haiku-4-5,qhana,"Embustero, farsante","Brillo o resplandor, especialmente el de la luz o el sol.",0.286,0.183,False
 claude-haiku-4-5,janya,Bostezo. Inspiración lenta y profunda,"Cosa de poco valor o importancia, bagatela.",0.405,0.007,False
@@ -786,11 +786,11 @@ claude-haiku-4-5,yuyay unancha,Cualidad,Capacidad o facultad de la memoria para 
 claude-haiku-4-5,achkhachay,Acrecentar. Aumentar,Temblador o cosa que tiembla continuamente.,0.355,0.158,False
 claude-haiku-4-5,wakichiy,Preparar por un largo trabajo,Hacer que alguien sea pobre o reducir a la pobreza.,0.43,0.058,False
 claude-haiku-4-5,tiyay,"Habitar. Vivir en un lugar, morar",Permanecer o estar sentado en un lugar.,0.592,0.432,False
-claude-haiku-4-5,chukcha rutukuy,Cortarse el pelo,Proceso de encanecimiento o blanqueamiento del cabello por la edad.,0.244,0.629,False
+claude-haiku-4-5,chukcha rutukuy,Cortarse el pelo,Proceso de encanecimiento o blanqueamiento del cabello por la edad.,0.244,0.629,True
 claude-haiku-4-5,link'u link'u,Zigzag. Serie de líneas que forman alternativamente ángulos entrantes y salientes,Movimiento ondulante o tembloroso del cuerpo.,0.368,0.147,False
-claude-haiku-4-5,rumi rumi,Pedregal. Sitio cubierto de piedras sueltas,Piedra pequeña o guijarro.,0.5,0.568,False
+claude-haiku-4-5,rumi rumi,Pedregal. Sitio cubierto de piedras sueltas,Piedra pequeña o guijarro.,0.5,0.568,True
 claude-haiku-4-5,yachakuy,"Saberse, llegara conocimiento una noticia. yachama, yachayma. Yachana, jamut'ay. s. Ciencia",Acción de aprender o adquirir conocimiento.,0.444,0.217,False
-claude-haiku-4-5,ullu,Pene. Órgano genital masculino,Miembro viril o testículo del varón o animal macho.,0.41,0.605,False
+claude-haiku-4-5,ullu,Pene. Órgano genital masculino,Miembro viril o testículo del varón o animal macho.,0.41,0.605,True
 claude-haiku-4-5,chiqchiriy,"Sonreír. Reírse levemente y sin ruido, con un simple movimiento de labios",Acción de rasguñar o arañar la piel con las uñas.,0.397,0.1,False
 claude-haiku-4-5,paqar,Amanecer. Tiempo durante el cual amanece,Mañana o el día siguiente al presente.,0.468,0.373,False
 claude-haiku-4-5,kallkiq kamayuq,El que adoquina,Persona encargada de administrar o cuidar los establos o corrales de ganado.,0.282,-0.015,False
@@ -811,7 +811,7 @@ claude-haiku-4-5,jik'u,Hipo. Movimiento convulsivo del diafragma,"Parte posterio
 claude-haiku-4-5,khallka,"Cascajoso, sa (JL)",Especie de ave rapaz nocturna similar al búho o lechuza.,0.301,0.169,False
 claude-haiku-4-5,yachakuq,Dícese del estudiante aprendiz,Persona que aprende o está en proceso de adquirir conocimientos.,0.409,0.45,False
 claude-haiku-4-5,phupachay,"Esponjar, hacer más fofo un cuerpo",Acción de hincharse o inflarse algo.,0.377,0.277,False
-claude-haiku-4-5,yaya,"Padre, en el que tiene hijos","Padre o progenitor varón, también usado como término de respeto hacia hombres mayores.",0.336,0.605,False
+claude-haiku-4-5,yaya,"Padre, en el que tiene hijos","Padre o progenitor varón, también usado como término de respeto hacia hombres mayores.",0.336,0.605,True
 claude-haiku-4-5,pillwiy,Nadar los peces,Acto de pellizcar o presionar algo con los dedos.,0.381,0.148,False
 claude-haiku-4-5,tumaqaya,Advenedizo. Extranjero,Cierto tipo de serpiente venenosa que habita en los Andes.,0.329,0.196,False
 claude-haiku-4-5,wat'isamkasqa,Angustiado. Aflijido,Acción de haber sido golpeado o azotado repetidamente.,0.301,0.288,False
@@ -823,7 +823,7 @@ claude-haiku-4-5,sinchi,Muy. Que indica grado sumo,"Persona fuerte, valiente o p
 claude-haiku-4-5,llaki,Tristeza. Estado del ánimo apenado,"Tristeza, pena o aflicción que causa sufrimiento moral.",0.455,0.722,True
 claude-haiku-4-5,yawnaykachay,Vocear. Publicar o manifestar con voces una cosa,"Acción de mostrarse o comportarse de manera altanera, arrogante o desdeñosa hacia otros.",0.4,0.181,False
 claude-haiku-4-5,karu runa,"Forastero, -ra. Persona que es o viene de fuera",Persona que vive lejos o en lugares distantes.,0.609,0.209,False
-claude-haiku-4-5,ch'allpay,Salpicar. Mojar o manchar con un líquido o sustenacia pastosa. ch'allpay. Ch'aqchay,"Acción de rociar o esparcir líquido sobre algo, especialmente agua o bebida en ceremonias rituales.",0.429,0.567,False
+claude-haiku-4-5,ch'allpay,Salpicar. Mojar o manchar con un líquido o sustenacia pastosa. ch'allpay. Ch'aqchay,"Acción de rociar o esparcir líquido sobre algo, especialmente agua o bebida en ceremonias rituales.",0.429,0.567,True
 claude-haiku-4-5,tullma,Cordel con adornos generalmente negro que sirve para trenzar al final de la trenza de los cabellos de la mujer,Sustancia pegajosa o viscosa que se extrae de ciertas plantas y se usa como adhesivo o para fines medicinales.,0.488,0.156,False
 claude-haiku-4-5,q'asu,Garrotazo. Golpe dado con garrote,Tejido fino de lana o algodón de trama apretada.,0.39,-0.059,False
 claude-haiku-4-5,yawarikuy,Menstruación. Flujo mensual de la mujer,Llorar abundantemente o derramar lágrimas con intensidad.,0.358,0.027,False
@@ -852,7 +852,7 @@ claude-haiku-4-5,siplay,"Pelar una papa, caña, etc. con los dedos o uñas","Tel
 claude-haiku-4-5,kutuna,Camisa tipo saco,Acción de volver o regresar a un lugar.,0.296,0.0,False
 claude-haiku-4-5,wirayachiy,Engordar. Cebar,Hacer crecer o aumentar el tamaño de algo.,0.321,0.087,False
 claude-haiku-4-5,chakira,Abalorio. Conjunto de cuentas agujereadas o dije circular de coral,Instrumento de madera o metal con dientes usado para rastrillar o desmenuzar la tierra en las labores agrícolas.,0.384,0.162,False
-claude-haiku-4-5,yanapanakuy,"Auxiliarse, socorrerse, ayudarse, prestarse mutua colaboración",Ayuda mutua o cooperación entre personas que se prestan asistencia de manera recíproca.,0.541,0.547,False
+claude-haiku-4-5,yanapanakuy,"Auxiliarse, socorrerse, ayudarse, prestarse mutua colaboración",Ayuda mutua o cooperación entre personas que se prestan asistencia de manera recíproca.,0.541,0.547,True
 claude-haiku-4-5,qhispillu,Vidrio,Instrumento de madera o metal con forma de gancho utilizado para sacar o extraer cosas.,0.115,0.131,False
 claude-haiku-4-5,jamlluy,Balbucear. Hablar o leer con pronunciación dificultosa y vacilante,Acción de barrer o limpiar el suelo con escoba.,0.411,0.126,False
 claude-haiku-4-5,ukumari,"Oso, -sa. Mamífero carnicero","Oso de anteojos, mamífero carnívoro de gran tamaño que habita en las montañas de América del Sur.",0.444,0.494,False

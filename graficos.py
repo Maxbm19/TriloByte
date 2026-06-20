@@ -24,7 +24,7 @@ import numpy as np
 DATA = Path("data/comparacion_llm.csv")
 DICC = Path("data/diccionario_quechua_castellano.csv")
 OUTDIR = Path("figs")
-UMBRAL = 0.65
+UMBRAL = 0.50
 PRINCIPAL = sys.argv[1] if len(sys.argv) > 1 else "claude-haiku-4-5"
 
 # --- estética -----------------------------------------------------------------

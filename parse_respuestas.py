@@ -16,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-UMBRAL = 0.65
+UMBRAL = 0.50
 REF = Path("data/muestra_500_ref.csv")
 LINEA = re.compile(r"^\s*(\d+)\s*[.\):-]\s*(.+)$")  # "12. ...."
 
