@@ -164,6 +164,44 @@ def fig_comparacion_modelos():
     guardar(fig, "juez_comparacion_modelos")
 
 
+def fig_similitudes(filas):
+    """Cruza las DOS similitudes: coseno del embedding (0–1) vs similitud del juez (0–100)."""
+    sem = {}
+    for r in csv.DictReader(COMP.open(encoding="utf-8")):
+        if r["modelo"] == MODELO:
+            sem[r["quechua"]] = float(r["sim_semantica"])
+    xs, ys = [], []
+    for r in filas:
+        if r.get("similitud") != "" and r["quechua"] in sem:
+            xs.append(sem[r["quechua"]])      # coseno embedding 0–1
+            ys.append(r["similitud"])          # similitud juez 0–100
+    if len(xs) < 5:
+        print("  (similitudes: sin cruce, omitido)")
+        return
+    xs, ys = np.array(xs), np.array(ys)
+
+    fig, ax = plt.subplots(figsize=(7, 5.5))
+    hb = ax.hexbin(xs, ys, gridsize=26, cmap="viridis", mincnt=1, linewidths=0.2)
+    # recta de regresión
+    a, b = np.polyfit(xs, ys, 1)
+    gx = np.linspace(0, 1, 50)
+    ax.plot(gx, a * gx + b, color="#c2410c", lw=2.4, label=f"ajuste: y = {a:.0f}·x + {b:.0f}")
+    # correlaciones
+    r_pearson = np.corrcoef(xs, ys)[0, 1]
+    rho = _spearman(list(xs), list(ys))
+    ax.text(0.03, 0.97, f"Pearson r = {r_pearson:.2f}\nSpearman ρ = {rho:.2f}",
+            transform=ax.transAxes, va="top", fontsize=11, style="italic",
+            bbox=dict(boxstyle="round", fc="white", ec="#ccc", alpha=0.85))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 100)
+    ax.set_xlabel("Similitud del coseno (embedding español, 0–1)")
+    ax.set_ylabel("Similitud del juez (opus-4-8, 0–100)")
+    ax.set_title(f"Las dos similitudes, comparadas · {MODELO} (n={len(xs)})")
+    ax.legend(frameon=False, loc="lower right")
+    cb = fig.colorbar(hb, ax=ax, fraction=0.046, pad=0.02)
+    cb.set_label("nº de palabras", fontsize=9)
+    guardar(fig, "similitud_coseno_vs_juez")
+
+
 def _spearman(x, y):
     def rangos(v):
         orden = sorted(range(len(v)), key=lambda i: v[i])
@@ -194,6 +232,7 @@ def main():
     fig_distribucion(filas)
     fig_promedios(filas)
     fig_vs_embedding(filas)
+    fig_similitudes(filas)
     fig_comparacion_modelos()
     print("Listo. Figuras en figs/")
 

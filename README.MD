@@ -44,20 +44,22 @@ modelos se evalúan sobre las mismas palabras.
 ### Segunda evaluación: LLM como juez
 
 Además del embedding, un **LLM juez independiente** (`claude-opus-4-8`, distinto y
-superior al traductor para evitar sesgo de auto-preferencia) califica cada
-definición de 1 a 5 en tres métricas. Sobre las **833** traducciones de
-`claude-haiku-4-5`:
+superior al traductor para evitar sesgo de auto-preferencia) compara cada
+definición candidata contra la del diccionario y la califica de 1 a 5 en tres
+métricas, más una **similitud de significado de 0 a 100**:
 
-| Métrica (1–5) | Media | Lectura |
-|---------------|:-----:|---------|
-| **Fluidez**     | **4.21** | el español suena natural |
-| Adecuación      | 1.73 | …pero el significado casi siempre está mal |
-| Completitud     | 1.66 | …y cubre poco del sentido real |
+| Modelo                  |  n  | Adecuación | Completitud | Fluidez | Similitud (0–100) |
+|-------------------------|:---:|:----------:|:-----------:|:-------:|:-----------------:|
+| `gemini-2.5-flash`      | 16  | 2.88       | 2.56        | 3.94    | **45**            |
+| `gemini-2.5-flash-lite` | 22  | 2.05       | 1.95        | 4.27    | **27**            |
+| `claude-haiku-4-5`      | 833 | 1.72       | 1.65        | 4.28    | **18**            |
 
-> **Hallazgo central:** los modelos producen español **fluido pero incorrecto** —
-> "alucinación segura" en una lengua de bajos recursos. Las dos evaluaciones
-> **concuerdan** (a mayor nota del juez, mayor similitud del embedding; ρ Spearman
-> = 0.48), así que la baja calidad es real, no un artefacto de la métrica.
+> **Hallazgo central:** en los tres modelos la **fluidez es alta (~4/5)** pero la
+> **adecuación y la similitud son bajas** → producen español **fluido pero
+> incorrecto** ("alucinación segura" en una lengua de bajos recursos). Las dos
+> evaluaciones independientes **concuerdan** (a mayor nota del juez, mayor
+> similitud del embedding; ρ Spearman = 0.48 en haiku), así que la baja calidad es
+> real, no un artefacto de la métrica.
 
 Las figuras estilo *paper* se generan en [`figs/`](figs/):
 
@@ -71,6 +73,8 @@ Las figuras estilo *paper* se generan en [`figs/`](figs/):
 | `juez_distribucion`       | distribución de las notas del juez (1–5) por métrica |
 | `juez_promedios`          | nota media por métrica (± IC 95 %) |
 | `juez_vs_embedding`       | el juez vs. el embedding concuerdan (validación cruzada) |
+| `juez_comparacion_modelos`| métricas y similitud del juez para los 3 modelos |
+| `similitud_coseno_vs_juez`| las dos similitudes (coseno vs. juez) correlacionan (r = 0.75) |
 
 ## Cómo funciona
 
@@ -168,6 +172,7 @@ puntuar_claude.py          Puntúa traducciones de Claude (sin API)
 parse_respuestas.py        Puntúa respuestas pegadas del chat (sin API)
 repuntuar.py               Re-puntúa CSV con el embedding español (sin API)
 juez_llm.py                LLM-as-judge (opus-4-8) — 3 métricas por traducción
+unir_metricas.py           Une embedding + juez en data/metricas_completo.csv
 recuperar_flash.py         Recupera filas de Gemini desde un log (utilidad)
 graficos.py                Genera las figuras de similitud (embedding)
 graficos_juez.py           Genera las figuras del LLM juez
