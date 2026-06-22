@@ -77,7 +77,7 @@ The paper-style figures are generated in [`figs/`](figs/):
 ## How it works
 
 ```
-Dictionary PDF              LLMs (Gemini / OpenRouter / Claude)
+Dictionary PDF              LLMs (Gemini / Claude)
         │                                  │
    main.py  ──►  dictionary CSV  ──►  comparar_*.py  ──►  comparison CSV  ──►  graficos.py  ──►  figs/
    (scraping)    (8,451 entries)     (define + score)    (sem/lex/match)        (figures)
@@ -106,9 +106,8 @@ uv sync
 To use the models via API, set the keys in a `.env` file:
 
 ```dotenv
-GEMINI_API_KEY=AIza...          # https://aistudio.google.com/apikey
-OPENROUTER_API_KEY=sk-or-v1-... # https://openrouter.ai/keys
-ANTHROPIC_API_KEY=sk-ant-...    # https://console.anthropic.com  (Claude + judge)
+GEMINI_API_KEY=AIza...       # https://aistudio.google.com/apikey
+ANTHROPIC_API_KEY=sk-ant-... # https://console.anthropic.com  (Claude + judge)
 ```
 
 > The embedding model (`hiiamsid/sentence_similarity_spanish_es`, ~440 MB,
@@ -125,13 +124,10 @@ uv run python main.py
 uv run python comparar_traducciones.py --n 500
 uv run python comparar_traducciones.py --n 50 --modelos gemini-2.5-flash gemini-2.5-flash-lite
 
-# 2b. Evaluate OpenRouter models (same seed → same words, comparable)
-uv run python comparar_openrouter.py --n 50 --modelos meta-llama/llama-3.3-70b-instruct:free
-
-# 2c. Score Claude's translations (no API; see note below)
+# 2b. Score Claude's translations (no API; see note below)
 uv run python puntuar_claude.py
 
-# 2d. Translate with Claude (cheapest model)
+# 2c. Translate with Claude (cheapest model)
 uv run python comparar_traducciones.py --proveedor claude --modelos claude-haiku-4-5 --n 1000
 
 # 3. Evaluate with the LLM judge (opus-4-8, concurrent) and generate figures
@@ -162,14 +158,12 @@ embedded in the script (a genuine attempt using knowledge of Bolivian Quechua,
 
 ```
 main.py                    Scrape the PDF → dictionary CSV
-comparar_traducciones.py   Evaluate Gemini models (define + score)
-comparar_openrouter.py     Evaluate OpenRouter models (reuses the logic)
+comparar_traducciones.py   Evaluate Gemini/Claude models (define + score)
 puntuar_claude.py          Score Claude's translations (no API)
 parse_respuestas.py        Score chat responses pasted in (no API)
 repuntuar.py               Re-score CSVs with the Spanish embedding (no API)
 juez_llm.py                LLM-as-judge (opus-4-8) — 3 metrics per translation
 unir_metricas.py           Merge embedding + judge into data/metricas_completo.csv
-recuperar_flash.py         Recover Gemini rows from a log (utility)
 graficos.py                Generate the similarity (embedding) figures
 graficos_juez.py           Generate the LLM-judge figures
 data/                      PDF, dictionary CSV, and comparison CSVs
