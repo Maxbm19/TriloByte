@@ -6,3 +6,10 @@
 __pycache__/
 *.pyc
 .venv/
+
+# macOS
+.DS_Store
+
+# Slides / exports (not part of the codebase; keep dictionary PDF and generated figures)
+/*.pdf
+/*.pptx
